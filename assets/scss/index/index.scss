@@ -1,0 +1,117 @@
+#cases{
+    margin-bottom: 125px;
+    .caseDescription{
+        width: 100%;
+        height: 460px;
+        padding: 55px 30px 35px 45px;
+        background-color: $brand-green;
+        position: relative;
+        margin-bottom: 75px;
+        .caseTechnology{
+            font-size: 18px;
+            font-weight: 600;
+            color: $white;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+        }
+        .caseTechnologyContent{
+            font-size: 14px;
+            color: $white;
+            letter-spacing: 0.1em;
+        }
+        .caseLogo{
+            position: absolute;
+            left: 45px;
+            bottom: 45px;
+        }
+        .caseLink{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 35px;
+            right: 30px;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background-color: $white;
+            color: $brand-green;
+            font-size: 50px;
+        }
+    }
+    .caseImage{
+        width: 100%;
+        height: 460px;
+        background : {
+            size: cover;
+            position: center center;
+            repeat: no-repeat;
+            image: url('../images/index/caseBackground.jpg');
+        }
+    }
+    .caseShowMoreLinkWrapper{
+        .caseShowMoreLink{
+            display: block;
+            border: 1px solid $brand-green;
+            border-radius: 30px;
+            padding: 15px 35px;
+            margin: 0 auto;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            color: $brand-green;
+            text-transform: uppercase;
+            width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+            width: -moz-max-content;    /* Firefox/Gecko */
+            width: -webkit-max-content; /* Chrome */
+            transition: all .5s ease-out;
+            -webkit-transition: all .5s ease-out;
+            &:hover{
+                background-color: $brand-green;
+                color: $white;
+            }
+        }
+    }
+}
+
+#popularItems{
+    margin-bottom: 125px;
+    .productCardPreview{
+        &:hover{
+            .productName, .productSKU{
+                color: $brand-green;
+            }
+        }
+        .productCardImage{
+            width: 100%;
+            height: 360px;
+            margin-bottom: 20px;
+            background : {
+                color: $brand-light-background;
+                position: center center;
+                repeat: no-repeat;
+            }
+        }
+        .productName{
+            font-weight: 700;
+            font-size: 14px;
+            color: $brand-black;
+            margin-bottom: 10px;
+            transition: all .5s ease-out;
+            -webkit-transition: all .5s ease-out;
+        }
+        .productSKU{
+            font-size: 14px;
+            text-transform: uppercase;
+            color: $brand-grey;
+            font-weight: 500;
+            transition: all .5s ease-out;
+            -webkit-transition: all .5s ease-out;
+            span{
+                font-size: 1.0em;
+                color: inherit;
+                font-weight: 500;
+            }
+        }
+    }
+}
