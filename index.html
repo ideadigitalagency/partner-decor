@@ -12,27 +12,58 @@
 	<title>Title</title>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.5/css/swiper.min.css">
+	
 	<link href="build/styles/style.min.css?v=0.001" rel="stylesheet">
-	 
+
 	<meta property="og:url" content="">
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="build/common/og.jpg">
 	<meta property="og:description" content="">
 </head>
 <body>
-<header>
-
+<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-3">
+				<div class="flexWrapper flexWrapperLeft">
+					<div id="nav-icon3">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="productCategoryList">
+						Продукты
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="flexWrapper">
+					<img src="build/images/index/logo.png" alt="logo" class="logo">
+				</div>
+				
+			</div>
+			<div class="col-3">
+				<div class="flexWrapper flexWrapperRight">
+					<a class="phone" href="tel:+380969277522">+380969277522</a>
+					<div class="favoriteIcon"></div>
+					<div class="searchIcon"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </header>
 <section id="intro">
+	<div class="pictureLayout"></div>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<p class="smallHeading text-center">
 					Дифференцируем бренд, разрабатывая эксклюзивные формы стекла.<br>Воплощаем идеи продвижения бренда в органичном декоре. 
 				</p>
-				<h1 class="text-center">Декорирование посуды</h1>
-				<button>Оставить заявку</button>
+				<h1 class="bigHeading effect-1 text-center" data-text="Декорирование посуды" >Декорирование посуды</h1>
+				<button class="opacityButton">Оставить заявку</button>
 				<a class="arrowBottom" href="#">
 					<img src="build/images/index/arrowDown.png" alt="scrollDown">
 				</a>
@@ -42,10 +73,11 @@
 </section>
 <section id="product">
 	<div class="container">
-		<div class="row">
+		<div class="row animatable bounceInLeft">
 			<div class="col-5">
 				<div class="productLinkWrapper">
 					<a href="#" class="productLink grey">
+						<img src="build/images/index/categories/alcohol.png" alt="alcohol">
 						<div class="layout">
 							<ul>
 								<li>
@@ -60,6 +92,7 @@
 				<div class="row rowExtended">
 					<div class="productLinkWrapper">
 						<a href="#" class="productLink yellow">
+							<img src="build/images/index/categories/tea.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
@@ -69,6 +102,7 @@
 							</div>
 						</a>
 						<a href="#" class="productLink orange">
+							<img src="build/images/index/categories/beer.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
@@ -82,6 +116,7 @@
 				<div class="row rowExtended">
 					<div class="productLinkWrapper">
 						<a href="#" class="productLink green">
+							<img src="build/images/index/categories/present.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
@@ -94,11 +129,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row  animatable bounceInRight">
 			<div class="col-7">
 				<div class="row rowExtended">
 					<div class="productLinkWrapper">
 						<a href="#" class="productLink green greenSecond">
+							<img src="build/images/index/categories/bottle.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
@@ -108,6 +144,7 @@
 							</div>
 						</a>
 						<a href="#" class="productLink yellow yellowSecond">
+							<img src="build/images/index/categories/vase.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
@@ -121,6 +158,7 @@
 				<div class="row rowExtended">
 					<div class="productLinkWrapper">
 						<a href="#" class="productLink orange orangeSecond">
+							<img src="build/images/index/categories/plate.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
@@ -135,6 +173,7 @@
 			<div class="col-5">
 				<div class="productLinkWrapper">
 					<a href="#" class="productLink grey greySecond">
+						<img src="build/images/index/categories/nonalcohol.png" alt="image">
 						<div class="layout">
 							<ul>
 								<li>
@@ -148,23 +187,63 @@
 		</div>
 	</div>
 </section>
-<section id="cases">
+<section id="clients">
+	<div class="container">
+		<h2 class="sectionHeading">Партнеры</h2>
+		<div class="row">
+			<div class="col-12">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">Slide 1</div>
+						<div class="swiper-slide">Slide 2</div>
+						<div class="swiper-slide">Slide 3</div>
+						<div class="swiper-slide">Slide 4</div>
+						<div class="swiper-slide">Slide 5</div>
+						<div class="swiper-slide">Slide 6</div>
+						<div class="swiper-slide">Slide 7</div>
+						<div class="swiper-slide">Slide 8</div>
+						<div class="swiper-slide">Slide 9</div>
+						<div class="swiper-slide">Slide 10</div>
+						<div class="swiper-slide">Slide 11</div>
+						<div class="swiper-slide">Slide 12</div>
+						<div class="swiper-slide">Slide 13</div>
+						<div class="swiper-slide">Slide 14</div>
+						<div class="swiper-slide">Slide 15</div>
+						<div class="swiper-slide">Slide 16</div>
+						<div class="swiper-slide">Slide 17</div>
+						<div class="swiper-slide">Slide 18</div>
+						<div class="swiper-slide">Slide 19</div>
+						<div class="swiper-slide">Slide 20</div>
+						<div class="swiper-slide">Slide 21</div>
+						<div class="swiper-slide">Slide 22</div>
+						<div class="swiper-slide">Slide 23</div>
+						<div class="swiper-slide">Slide 24</div>
+						<div class="swiper-slide">Slide 25</div>
+						<div class="swiper-slide">Slide 26</div>
+						<div class="swiper-slide">Slide 27</div>
+						<div class="swiper-slide">Slide 28</div>
+						<div class="swiper-slide">Slide 29</div>
+						<div class="swiper-slide">Slide 30</div>
+					</div>
+							<!-- Add Pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="case">
 	<div class="container">
 		<h2 class="sectionHeading">Кейсы</h2>
 		<div class="row">
-			<div class="col-5">
-				<div class="caseDescription">
+			<div class="caseWrapper">
+				<a href="#" class="caseImageLink bounceInLeft animatable"></a>
+				<div class="caseDescription text-center bounceInRight animatable">
+					<p class="caseHeading">Беленькая "Петриковская"</p>
 					<p class="caseTechnology">Технология</p>
 					<p class="caseTechnologyContent">химическое матирование с эффектом "окна", шелкотрафаретная печать керамическими красками</p>
-					<img src="build/images/index/caseLogo.png" alt="logo" class="caseLogo">
-					<a class="caseLink" href="#">+</a>
+					<a class="caseLink" href="#">Смотреть</a>
 				</div>
-			</div>
-			<div class="col-7">
-				<a href="#">
-					<div class="caseImage">
-					</div>
-				</a>
 			</div>
 		</div>
 		<div class="caseShowMoreLinkWrapper">
@@ -213,11 +292,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<div class="formWrapper">
+				<div class="formWrapper animatable fadeBgColor">
 					<img class="treeImage" alt="background" src="build/images/form/formBackgroundImage.png"> 
-					<h2 class="text-center">Остались вопросы?</h2>
-					<p class="text-center">Оставьте заявку и наш менеджер свяжется с Вами</p>
-					<form>
+					<h2 class="smallerHeading text-center">Остались вопросы?</h2>
+					<p class="smallerHeading text-center">Оставьте заявку и наш менеджер свяжется с Вами</p>
+					<form class="introForm">
 						<div class="form-group">
 							<input type="text" class="form-control" id="name" placeholder="Имя*">
 						</div>
@@ -341,6 +420,12 @@
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<!-- <script src="build/js/noframework.waypoints.min.js?v=0.001"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+
 <script src="build/js/scripts.min.js?v=0.001"></script>
+<!-- <script src="build/js/owl.carousel.min.js?v=0.001"></script> -->
+<script src="build/js/animations.min.js?v=0.001"></script>
 </body>
 </html>

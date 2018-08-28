@@ -1,35 +1,92 @@
 #intro{
-    padding-top: 155px;
-    @media screen and (min-width: 1140px) and(max-width: 1439px){
-        padding-top: 115px;
-    }
+    padding-top: 50px;
     min-height: 100vh;
-    background : {
-        position: center 75%;
-        repeat: no-repeat;
-        image: url('../images/index/indexBackground.jpg');
+    position: relative;
+    // background : {
+    //     position: center center;
+    //     repeat: no-repeat;
+    //     image: url('../images/index/indexBackground.jpg');
+    // }
+    .pictureLayout{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background : {
+            position: center center;
+            repeat: no-repeat;
+            image: url('../images/index/indexBackgroundBig.jpg');
+        }
+        opacity: 0;
+        transition: opacity 1s;
+        -webkit-transition: opacity 1s;
     }
     .smallHeading{
         font-size: 14px;
         color: $brand-light-grey;
-        margin-bottom: 230px;
+        margin-bottom: 200px;
         @media screen and (min-width: 1140px) and(max-width: 1439px){
             margin-bottom: 155px;
         }
+        opacity: 0;
+        -webkit-transition: opacity 1s;
+        transition: opacity 1s;
     }
     h1{
         font-size: 62px;
         font-weight: 800;
         text-transform: uppercase;
         margin-bottom: 170px;
+        overflow: hidden;
+        
+        
+        // opacity: 0;
+        // transition: opacity 1s;
+        // -webkit-transition: opacity 1s;
+    }
+    .effect-1 {
+        position: relative;
+        display: inline-block;
+        font-size: 100px;
+        color: #d4d4d4;
+      
+        &:before {
+            content: attr(data-text);
+            position: absolute;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            color: #72cc96;
+            animation: fill-1 2s infinite;
+        }
+    }
+      
+    @keyframes fill-1 {
+        50%   { width: 100%; }
+        100%  { width: 0%;   }
     }
     button{
         @extend .buttonStyles;
         display: block;
-        border: 1px solid #2fb4a2;
-        color: #fff;
-        background-color: #2fb4a2;
+        border: 1px solid $brand-green;
+        color: $white;
+        background-color: $brand-green;
         margin-bottom: 35px;
+        transition: background-color .5s ease-out;
+        -webkit-transition: background-color .5s ease-out;
+        transition: color .5s ease-out;
+        -webkit-transition: color .5s ease-out;
+        &:hover{
+            background-color: $white;
+            color: $brand-green;
+        }
+    }
+    .opacityButton{
+        opacity: 0;
+        transition: opacity 1s;
+        -webkit-transition: opacity 1s;
     }
     .arrowBottom{
         display: block;
@@ -52,25 +109,34 @@
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
+        overflow: hidden;
         a{
-            display: block;
+            display: flex;
             position: relative;
             background : {
                 position: center center;
                 repeat: no-repeat;
             }
+            &:hover{
+                img{
+                    transform: scale(1.2, 1.2);
+                    -moz-transition:  transform 1s;
+                    -webkit-transition:  transform 1s;
+                    transition: transform 1s;
+                }
+            }
+            img{
+                margin: auto;
+                -moz-transition:  transform 1s;
+                -webkit-transition:  transform 1s;
+                transition: transform 1s;
+            }
         }
 
         .grey{
-            display: block;
             width: 100%;
             height: 560px;
             background-color: $product-background-grey;
-            background-image: url('../images/index/categories/alcohol.png');
-        }
-
-        .greySecond{
-            background-image: url('../images/index/categories/nonalcohol.png');
         }
 
         .yellow{
@@ -78,11 +144,6 @@
             width: 301.5px;
             height: 294px;
             margin-bottom: 30px;
-            background-image: url('../images/index/categories/tea.png');
-        }
-
-        .yellowSecond{
-            background-image: url('../images/index/categories/vase.png');
         }
 
         .orange{
@@ -90,14 +151,12 @@
             width: 301.5px;
             height: 294px;
             margin-bottom: 30px;
-            background-image: url('../images/index/categories/beer.png');
         }
 
         .orangeSecond{
             width: 100%;
             height: 235.5px;
             margin-bottom: 0;
-            background-image: url('../images/index/categories/plate.png');
         }
 
         .green{
@@ -105,13 +164,11 @@
             width: 100%;
             height: 235.5px;
             margin-bottom: 30px;
-            background-image: url('../images/index/categories/present.png');
         }
 
         .greenSecond{
             width: 301.5px;
             height: 294px;
-            background-image: url('../images/index/categories/bottle.png');
         }
 
         .layout{
@@ -141,6 +198,7 @@
                 }
             } 
         }
+
         .layoutShow{
             animation: showElements 0.5s 1;
             opacity: 1;
@@ -148,57 +206,96 @@
     }
 }
 
-#cases{
+#clients{
     margin-bottom: 125px;
-    .caseDescription{
+    .swiper-container {
         width: 100%;
-        height: 460px;
-        padding: 55px 30px 35px 45px;
-        background-color: $brand-green;
-        position: relative;
-        margin-bottom: 75px;
-        .caseTechnology{
-            font-size: 18px;
-            font-weight: 600;
-            color: $white;
-            letter-spacing: 0.1em;
-            margin-bottom: 20px;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        .swiper-slide {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+			height: 200px;
+			  /* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+    }
+}
+
+#case{
+    margin-bottom: 125px;
+    .caseWrapper{
+        display: inline-flex;
+        width: 100%;
+        .caseDescription{
+            width: 43%;
+            height: 460px;
+            padding: 85px 80px 30px;
+            background-color: $brand-green;
+            position: relative;
+            margin-bottom: 75px;
+            .caseHeading{
+                font-size: 21px;
+                font-weight: 700;
+                color: $white;
+                margin-bottom: 72px;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+            .caseTechnology{
+                font-size: 18px;
+                font-weight: 600;
+                color: $white;
+                letter-spacing: 0.1em;
+                margin-bottom: 21px;
+            }
+            .caseTechnologyContent{
+                font-size: 14px;
+                color: $white;
+                letter-spacing: 0.1em;
+                margin-bottom: 60px;
+            }
+            .caseLink{
+                @extend .buttonStyles;
+                display: block;
+                border: 1px solid $white;
+                background-color: $white;
+                padding: 11px 35px;
+                font-size: 11px;
+                color: $brand-green;
+                width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+                width: -moz-max-content;    /* Firefox/Gecko */
+                width: -webkit-max-content; /* Chrome */
+                &:hover{
+                    background-color: $brand-green;
+                    color: $white;
+                }
+            }
         }
-        .caseTechnologyContent{
-            font-size: 14px;
-            color: $white;
-            letter-spacing: 0.1em;
-        }
-        .caseLogo{
-            position: absolute;
-            left: 45px;
-            bottom: 45px;
-        }
-        .caseLink{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            bottom: 35px;
-            right: 30px;
-            width: 65px;
-            height: 65px;
-            border-radius: 50%;
-            background-color: $white;
-            color: $brand-green;
-            font-size: 50px;
+        .caseImageLink{
+            width: 57%;
+            height: 460px;
+            background : {
+                position: center center;
+                size: cover;
+                image : url('../images/index/caseBackground.jpg');
+            }
         }
     }
-    .caseImage{
-        width: 100%;
-        height: 460px;
-        background : {
-            size: cover;
-            position: center center;
-            repeat: no-repeat;
-            image: url('../images/index/caseBackground.jpg');
-        }
-    }
+    
     .caseShowMoreLinkWrapper{
         .caseShowMoreLink{
             display: block;
@@ -247,9 +344,8 @@
                     -moz-transition: opacity 1s;
                     -webkit-transition: opacity 1s;
                     transition: opacity 1s;
-                    //animation: showElements 0.5s 1;
                     opacity: 1;
-                }   
+                }
             }
             div{
                 position: absolute;
@@ -272,7 +368,6 @@
                     display: block;
                     content: '';
                     background : {
-                        position: center center;
                         repeat: no-repeat;
                     }
                 }
@@ -284,7 +379,16 @@
                     width: 22px;
                     height: 17px;
                     right: -33px;
-                    background-image: url('../images/casesDemo/productMore.png');
+                    background : {
+                        image: url('../images/casesDemo/productMoreSprite.png'); 
+                        repeat: no-repeat;
+                        position: -3px -3px;
+                    }                    
+                }
+                &:hover{
+                    &:before{
+                        background-position: -3px -26px;
+                    }
                 }
             }
             .productBio{ 
@@ -294,9 +398,17 @@
                     width: 19px;
                     height: 19px;            
                     left: -27px;
-                    background-image: url('../images/casesDemo/productBio.png');
+                    background : {
+                        image: url('../images/casesDemo/productBioSprite.png');
+                        repeat: no-repeat;
+                        position: -5px -5px;
+                    }
                 }
-                
+                &:hover{
+                    &:before{
+                        background-position: -5px -34px;
+                    }
+                }
             }
         }
         .productCardImageFirst{
@@ -335,7 +447,7 @@
 #form{
     margin-bottom: 100px;
     .formWrapper{
-        background-color: rgba(47, 180, 162, 0.15);
+        //background-color: rgba(47, 180, 162, 0.15);
         padding: 130px 0 145px;
         position: relative;
         .treeImage{
@@ -354,6 +466,11 @@
             color: $brand-light-grey;
             font-style: italic;
             margin-bottom: 50px;
+        }
+        .smallerHeading, .treeImage, .introForm{
+            opacity: 0;
+            transition: opacity 1s;
+            -webkit-transition: opacity 1s;
         }
         form{
             max-width: 360px;

@@ -4,5 +4,7 @@
 @import "common/modal.scss";
 @import "common/header.scss";
 @import "common/footer.scss";
+@import "common/animationMenu.scss";
+@import "common/animations.scss";
 
 @import "index/index.scss";
