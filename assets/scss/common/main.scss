@@ -12,6 +12,13 @@ html, body, div, span, p, header, footer, section, h1, h2, h3, h4, h5, h6, ul, l
     border: 0;
 }
 
+/* remove horizontal scroll */
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+/* headings 4 all sections. usually with h2 */
 .sectionHeading{
     font-weight: 800;
     font-size: 40px;
@@ -21,6 +28,7 @@ html, body, div, span, p, header, footer, section, h1, h2, h3, h4, h5, h6, ul, l
     margin-bottom: 60px;
 }
 
+/* common for all images */
 img{
     max-width: 100%;
     height: auto;
@@ -45,4 +53,78 @@ img{
 
 .removeOpacity{
     opacity: 1 !important;
+}
+
+/* form block. common for pages */
+#form{
+    margin-bottom: 100px;
+    .formWrapper{
+        //background-color: rgba(47, 180, 162, 0.15);
+        padding: 130px 0 145px;
+        position: relative;
+        .treeImage{
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            max-height: 100%;
+        }
+        h2{
+            font-size: 40px;
+            text-transform: uppercase;
+            margin-bottom: 45px;
+        }
+        p{
+            color: $brand-light-grey;
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+        .smallerHeading, .treeImage, .introForm{
+            opacity: 0;
+            transition: opacity 1s;
+            -webkit-transition: opacity 1s;
+        }
+        form{
+            max-width: 360px;
+            margin: 0 auto;
+            .form-group{
+                &:last-of-type{
+                    margin-bottom: 50px;
+                }
+                .form-control{
+                    padding: 15px 25px;
+                    border-radius: $radius;
+                    font-size: 14px;
+                    color: $brand-black;
+                    &:focus, &:active{
+                        outline: none;
+                        box-shadow: none;
+                        border-color: $brand-green;
+                    }
+                }
+                ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                    color: $brand-grey;
+                }
+                ::-moz-placeholder { /* Firefox 19+ */
+                    color: $brand-grey;
+                }
+                :-ms-input-placeholder { /* IE 10+ */
+                    color: $brand-grey;
+                }
+                :-moz-placeholder { /* Firefox 18- */
+                    color: $brand-grey;
+                }
+            }
+            button{
+                @extend .buttonStyles;
+                display: block;
+                border: 1px solid $brand-green;
+                color: $white;
+                background-color: $brand-green;  
+                &:focus, &:active{
+                    border-color: $brand-green;
+                }
+            }
+        }
+    }
 }
