@@ -1,0 +1,65 @@
+#introVideo{
+    min-height: calc(100vh - 113px);
+    padding-top: 225px;
+    background : {
+        position: center center;
+        size: cover;
+        repeat: no-repeat;
+        image: url('../images/product/background.jpg');
+    }
+    .biggestHeader{
+        font-weight: 300;
+        font-size: 55px;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 145px;
+        @media screen and (min-width: 1440px){
+            margin-bottom: 250px;
+        }
+        opacity: 0;
+        -webkit-transition: opacity 1s;
+        transition: opacity 1s;
+    }
+    button{
+        @extend .buttonStyles;
+        display: block;
+        border: 1px solid $brand-green;
+        color: $white;
+        background-color: $brand-green;
+        margin-bottom: 35px;
+        &:hover{
+            background-color: $white;
+            color: $brand-green;
+        }
+    }
+    .arrowBottom{
+        display: block;
+        width: intrinsic;
+        width: -moz-max-content;
+        width: -webkit-max-content;
+
+        margin: 0 auto;
+    }
+}
+
+.nonalcoholProduct{
+    .productLinkWrapper{
+        flex-direction: column;
+        .blue{
+            height: 660px;
+            width: 100%;
+            background-color: $brand-blue;
+        }
+        .grey{
+            height: 380px;
+            width: 100%;
+            margin-bottom: 30px;
+            background-color: $product-background-grey;
+        }
+        .blueDarken{
+            width: 100%;
+            height: 250px;
+            background-color: $brand-dark-blue;
+        }
+    }
+}

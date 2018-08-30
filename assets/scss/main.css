@@ -8,3 +8,5 @@
 @import "common/animations.scss";
 
 @import "index/index.scss";
+@import "products/nonalcohol.scss";
+@import "products/plate.scss";

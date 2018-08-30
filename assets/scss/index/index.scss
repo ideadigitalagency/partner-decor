@@ -83,40 +83,8 @@
     }
 }
 
-#product{
-    margin-bottom: 127px;
-    .rowExtended{
-        margin: 0 0 0 0;
-    }
+.mainpageProduct{
     .productLinkWrapper{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        overflow: hidden;
-        a{
-            display: flex;
-            position: relative;
-            background : {
-                position: center center;
-                repeat: no-repeat;
-            }
-            &:hover{
-                img{
-                    transform: scale(1.2, 1.2);
-                    -moz-transition:  transform 1s;
-                    -webkit-transition:  transform 1s;
-                    transition: transform 1s;
-                }
-            }
-            img{
-                margin: auto;
-                -moz-transition:  transform 1s;
-                -webkit-transition:  transform 1s;
-                transition: transform 1s;
-            }
-        }
-
         .grey{
             width: 100%;
             height: 560px;
@@ -154,39 +122,6 @@
             width: 301.5px;
             height: 294px;
         }
-
-        .layout{
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            background-color: rgba(255, 255, 255, 0.75);
-            display: flex;
-            opacity: 0;
-            -moz-transition: opacity 1s;
-            -webkit-transition: opacity 1s;
-            transition: opacity 1s;
-            &:hover{
-                opacity: 1;
-                -moz-transition: opacity 1s;
-                -webkit-transition: opacity 1s;
-                transition: opacity 1s;
-            }
-            ul{
-                margin: auto;
-                li{
-                    font-size: 18px;
-                    font-weight: 800;
-                    text-transform: uppercase;
-                }
-            } 
-        }
-
-        .layoutShow{
-            animation: showElements 0.5s 1;
-            opacity: 1;
-        }
     }
 }
 
@@ -214,9 +149,32 @@
 			-webkit-box-align: center;
 			-ms-flex-align: center;
 			-webkit-align-items: center;
-			align-items: center;
+            align-items: center;
+            img{
+                -webkit-transition: .5s ease-in-out;
+                -moz-transition: .5s ease-in-out;
+                -o-transition: .5s ease-in-out;
+                transition: .5s ease-in-out;
+                -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+                filter: grayscale(100%); /* FF 35+ */
+                cursor: pointer;
+                opacity: 0.5;
+                &:hover{
+                    -webkit-transition: .5s ease-in-out;
+                    -moz-transition: .5s ease-in-out;
+                    -o-transition: .5s ease-in-out;
+                    transition: .5s ease-in-out;
+                    -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+                    filter: grayscale(0%); /* FF 35+ */
+                    opacity: 1;
+                }
+            }
         }
         .swiper-pagination{
+            position: relative;
+            bottom: auto;
+            left: auto;
+            margin-top: 90px;
             .swiper-pagination-bullet-active{
                 background: $brand-green;
                 width: 10px;
@@ -315,123 +273,4 @@
 
 #popularItems{
     margin-bottom: 125px;
-    .productCardPreview{
-        &:hover{
-            .productName, .productSKU{
-                color: $brand-green;
-            }
-        }
-        .productCardImage{
-            width: 100%;
-            height: 360px;
-            margin-bottom: 20px;
-            background : {
-                color: $brand-light-background;
-                position: center center;
-                repeat: no-repeat;
-            }
-            position: relative;
-            &:hover{
-                div{
-                    -moz-transition: opacity 1s;
-                    -webkit-transition: opacity 1s;
-                    transition: opacity 1s;
-                    opacity: 1;
-                }
-            }
-            div{
-                position: absolute;
-
-                width: intrinsic;
-                width: -moz-max-content;
-                width: -webkit-max-content;
-
-                font-size: 14px;
-                font-style: italic;
-                
-                cursor: pointer;
-
-                opacity: 0;
-                -moz-transition: opacity 1s;
-                -webkit-transition: opacity 1s;
-                transition: opacity 1s;
-                &:before{
-                    position: absolute;
-                    display: block;
-                    content: '';
-                    background : {
-                        repeat: no-repeat;
-                    }
-                }
-            }
-            .productAddToFavorite{
-                top: 17px;
-                right: 60px;
-                &:before{
-                    width: 22px;
-                    height: 17px;
-                    right: -33px;
-                    background : {
-                        image: url('../images/casesDemo/productMoreSprite.png'); 
-                        repeat: no-repeat;
-                        position: -3px -3px;
-                    }                    
-                }
-                &:hover{
-                    &:before{
-                        background-position: -3px -26px;
-                    }
-                }
-            }
-            .productBio{ 
-                bottom: 17px;
-                left: 60px;
-                &:before{    
-                    width: 19px;
-                    height: 19px;            
-                    left: -27px;
-                    background : {
-                        image: url('../images/casesDemo/productBioSprite.png');
-                        repeat: no-repeat;
-                        position: -5px -5px;
-                    }
-                }
-                &:hover{
-                    &:before{
-                        background-position: -5px -34px;
-                    }
-                }
-            }
-        }
-        .productCardImageFirst{
-            background-image: url('../images/casesDemo/casesDemo.png')
-        }
-        .productCardImageSecond{
-            background-image: url('../images/casesDemo/casesDemo2.png')
-        }
-        .productCardImageThird{
-            background-image: url('../images/casesDemo/casesDemo3.png')
-        }
-        .productName{
-            font-weight: 700;
-            font-size: 14px;
-            color: $brand-black;
-            margin-bottom: 10px;
-            transition: all .5s ease-out;
-            -webkit-transition: all .5s ease-out;
-        }
-        .productSKU{
-            font-size: 14px;
-            text-transform: uppercase;
-            color: $brand-grey;
-            font-weight: 500;
-            transition: all .5s ease-out;
-            -webkit-transition: all .5s ease-out;
-            span{
-                font-size: 1.0em;
-                color: inherit;
-                font-weight: 500;
-            }
-        }
-    }
 }

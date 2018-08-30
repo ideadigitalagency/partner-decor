@@ -12,15 +12,19 @@
 	<title>Title</title>
 
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.5/css/swiper.min.css">
+    <link href="build/styles/style.min.css?v=0.001" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.5/css/swiper.min.css">
 	<link rel="stylesheet" href="build/styles/owl.carousel.min.css?v=0.001">
     <link rel="stylesheet" href="build/styles/owl.theme.default.min.css?v=0.001">
-	<link href="build/styles/style.min.css?v=0.001" rel="stylesheet">
 
 	<meta property="og:url" content="">
 	<meta property="og:type" content="website">
 	<meta property="og:image" content="build/common/og.jpg">
 	<meta property="og:description" content="">
+	<style>
+		
+	</style>
+
 </head>
 <body>
 <header class="header">
@@ -55,16 +59,11 @@
 		</div>
 	</div>
 </header>
-<section id="intro">
-	<div class="pictureLayout"></div>
+<section id="introVideo">
 	<div class="container">
 		<div class="row">
-			<div class="col-12">
-				<p class="smallHeading text-center">
-					Дифференцируем бренд, разрабатывая эксклюзивные формы стекла.<br>Воплощаем идеи продвижения бренда в органичном декоре. 
-				</p>
-				<h1 class="bigHeading text-center">Декорирование посуды</h1>
-				<div id="bigHeading" style="display: none;">Декорирование посуды</div>
+			<div class="offset-1 col-10">
+				<h1 class="biggestHeader text-center">декор посуды для алкогольных напитков</h1>
 				<button class="opacityButton">Оставить заявку</button>
 				<a class="arrowBottom" href="#">
 					<img src="build/images/index/arrowDown.png" alt="scrollDown">
@@ -75,40 +74,48 @@
 </section>
 <section id="product" class="mainpageProduct">
 	<div class="container">
-		<div class="row animatable bounceInLeft">
+		<div class="row">
+			<div class="col-12">
+				<div class="breadcrumbs">
+					<a class="page" href="/">Главная</a>
+					<a class="currentPage" href="/">Посуда для алкогольных напитков</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
 			<div class="col-5">
 				<div class="productLinkWrapper">
 					<a href="#" class="productLink grey">
-						<img src="build/images/index/categories/alcohol.png" alt="alcohol">
+						<img src="build/images/index/alcohol/vineGlass.png" alt="alcohol">
 						<div class="layout">
 							<ul>
 								<li>
-									Алкогольные емкости
+									Бокалы для винишка
 								</li>
 							</ul>
 						</div>
 					</a>
-				</div>
+			</div>
 			</div>
 			<div class="col-7">
 				<div class="row rowExtended">
 					<div class="productLinkWrapper">
 						<a href="#" class="productLink yellow">
-							<img src="build/images/index/categories/tea.png" alt="image">
+							<img src="build/images/index/alcohol/vodkaGlass.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
-										Чашки
+										Стопочки для водочки
 									</li>
 								</ul>
 							</div>
 						</a>
 						<a href="#" class="productLink orange">
-							<img src="build/images/index/categories/beer.png" alt="image">
+							<img src="build/images/index/alcohol/cuckoo.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
-										Бокалы
+										Чекушечка для беленькой
 									</li>
 								</ul>
 							</div>
@@ -118,215 +125,67 @@
 				<div class="row rowExtended">
 					<div class="productLinkWrapper">
 						<a href="#" class="productLink green">
-							<img src="build/images/index/categories/present.png" alt="image">
+							<img src="build/images/index/alcohol/tumbker.png" alt="image">
 							<div class="layout">
 								<ul>
 									<li>
-										Подарки
+										Тумблеры
 									</li>
 								</ul>
 							</div>
 						</a>
 					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row  animatable bounceInRight">
-			<div class="col-7">
-				<div class="row rowExtended">
-					<div class="productLinkWrapper">
-						<a href="#" class="productLink green greenSecond">
-							<img src="build/images/index/categories/bottle.png" alt="image">
-							<div class="layout">
-								<ul>
-									<li>
-										Бутылки
-									</li>
-								</ul>
-							</div>
-						</a>
-						<a href="#" class="productLink yellow yellowSecond">
-							<img src="build/images/index/categories/vase.png" alt="image">
-							<div class="layout">
-								<ul>
-									<li>
-										Вазы
-									</li>
-								</ul>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="row rowExtended">
-					<div class="productLinkWrapper">
-						<a href="#" class="productLink orange orangeSecond">
-							<img src="build/images/index/categories/plate.png" alt="image">
-							<div class="layout">
-								<ul>
-									<li>
-										Тарелки
-									</li>
-								</ul>
-							</div>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-5">
-				<div class="productLinkWrapper">
-					<a href="#" class="productLink grey greySecond">
-						<img src="build/images/index/categories/nonalcohol.png" alt="image">
-						<div class="layout">
-							<ul>
-								<li>
-									Безалкогольные емкости
-								</li>
-							</ul>
-						</div>
-					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-<section id="clients">
+<section id="review">
 	<div class="container">
-		<h2 class="sectionHeading">Партнеры</h2>
+	<h2 class="sectionHeading">Отзывы</h2>
 		<div class="row">
 			<div class="col-12">
-				<div class="swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img src="build/images/logo/artwineryColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/kavaColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/drfreiColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/dynamoColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/radapremiumColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/alexxColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/poehavshiiColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/stariykakhetiColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/prostokvashinoColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/zlatobeerColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/tessColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/inkermanColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/stargorodColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/aznauriColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/pravdaColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/greendayColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/koktebelColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/shustoffColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/khortycaColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/jatoneColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/zubrovkaColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/goodwineColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/teachersColored.png" class="logo">
-						</div>
-						<div class="swiper-slide">
-							<img src="build/images/logo/karcherColored.png" class="logo">
-						</div>
+				<div class="reviewSliderWrapper owl-carousel">
+					<div>
+						<div class="textBlock text-center">
+							<img src="build/images/common/picture.png" alt="picture" class="picture">
+							<div class="nameWrapper">
+								<p class="name">Александр Акаут</p>
+							</div>
+							<p class="position">основатель "Nobius"</p>
+							<p class="review">Рюмки, стопки и шоты, расписанные индивидуально, украсят любое застолье, а также станут превосходным подарком. Вы с гордостью можете преподнести своим партнерам и клиентам эти полезные, украшенные логотипом вашей компании сувениры.</p>
+						</div> 
 					</div>
-							<!-- Add Pagination -->
-					<div class="swiper-pagination"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<section id="case">
-	<div class="container">
-		<h2 class="sectionHeading">Кейсы</h2>
-		<div class="row">
-			<div class="caseWrapper">
-				<a href="#" class="caseImageLink bounceInLeft animatable"></a>
-				<div class="caseDescription text-center bounceInRight animatable">
-					<p class="caseHeading">Беленькая "Петриковская"</p>
-					<p class="caseTechnology">Технология</p>
-					<p class="caseTechnologyContent">химическое матирование с эффектом "окна", шелкотрафаретная печать керамическими красками</p>
-					<a class="caseLink" href="#">Смотреть</a>
-				</div>
-			</div>
-		</div>
-		<div class="caseShowMoreLinkWrapper">
-			<a href="#" class="caseShowMoreLink">Смотреть все кейсы</a>
-		</div>
-	</div>
-</section>
-<section id="popularItems">
-	<div class="container">
-			<h2 class="sectionHeading">Популярные товары</h2>
-		<div class="row">
-			<div class="col-4">
-				<div class="productCardPreview">
-					<div class="productCardImage productCardImageFirst">
-						<div class="productAddToFavorite">+ в избранное</div>
-						<div class="productBio">подробнее</div>
+					<div>
+						<div class="textBlock text-center">
+							<img src="build/images/common/picture.png" alt="picture" class="picture">
+							<div class="nameWrapper">
+								<p class="name">Александр Акаут</p>
+							</div>
+							<p class="position">основатель "Nobius"</p>
+							<p class="review">Рюмки, стопки и шоты, расписанные индивидуально, украсят любое застолье, а также станут превосходным подарком. Вы с гордостью можете преподнести своим партнерам и клиентам эти полезные, украшенные логотипом вашей компании сувениры.</p>
+						</div> 
 					</div>
-					<p class="productName">Декорация водочной бутылки</p>
-					<p class="productSKU">Артикул <span>#7000090</span></p>
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="productCardPreview">
-					<div class="productCardImage productCardImageSecond">
-						<div class="productAddToFavorite">+ в избранное</div>
-						<div class="productBio">подробнее</div>
+					<div>
+						<div class="textBlock text-center">
+							<img src="build/images/common/picture.png" alt="picture" class="picture">
+							<div class="nameWrapper">
+								<p class="name">Александр Акаут</p>
+							</div>
+							<p class="position">основатель "Nobius"</p>
+							<p class="review">Рюмки, стопки и шоты, расписанные индивидуально, украсят любое застолье, а также станут превосходным подарком. Вы с гордостью можете преподнести своим партнерам и клиентам эти полезные, украшенные логотипом вашей компании сувениры.</p>
+						</div> 
 					</div>
-					<p class="productName">Декорация чашки с блюдцем Julia</p>
-					<p class="productSKU">Артикул <span>#7000091</span></p>
-				</div>
-			</div>
-			<div class="col-4">
-				<div class="productCardPreview">
-					<div class="productCardImage productCardImageThird">
-						<div class="productAddToFavorite">+ в избранное</div>
-						<div class="productBio">подробнее</div>
+					<div>
+						<div class="textBlock text-center">
+							<img src="build/images/common/picture.png" alt="picture" class="picture">
+							<div class="nameWrapper">
+								<p class="name">Александр Акаут</p>
+							</div>
+							<p class="position">основатель "Nobius"</p>
+							<p class="review">Рюмки, стопки и шоты, расписанные индивидуально, украсят любое застолье, а также станут превосходным подарком. Вы с гордостью можете преподнести своим партнерам и клиентам эти полезные, украшенные логотипом вашей компании сувениры.</p>
+						</div> 
 					</div>
-					<p class="productName">Декорация чашки с блюдцем Landon</p>
-					<p class="productSKU">Артикул <span>#7000091</span></p>
 				</div>
 			</div>
 		</div>
