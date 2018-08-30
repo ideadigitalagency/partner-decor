@@ -79,20 +79,24 @@ $(function() {
 });
 
 $('#easyPaginate').easyPaginate({
-    paginateElement: 'div.col-4',
+    paginateElement: 'div.productCardPreviewWrapper',
     elementsPerPage: 24
 });
 
-$('#easyPaginate').jscroll({
-    autoTrigger: true,
-    contentSelector: '#easyPaginate > *'
-});
+// $('#easyPaginate').jscroll({
+//     autoTrigger: true,
+//     contentSelector: '#easyPaginate > *'
+// });
 
 $('.page').click(function () {
     $('html, body').animate({
         scrollTop: $("#easyPaginate").offset().top - 150
     }, 2000);
     return false;
+});
+
+$('.page').click(function () {
+    $('.productCardPreviewWrapper').addClass('visible')
 });
 
 // $('.wrapperWrapper').infiniteScroll({

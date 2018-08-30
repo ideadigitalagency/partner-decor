@@ -136,6 +136,7 @@ img{
 /* styles common 4 all products */
 #product{
     margin-bottom: 127px;
+    
     .rowExtended{
         margin: 0 0 0 0;
     }
@@ -393,6 +394,7 @@ img{
         .productAddToFavorite{
             top: 17px;
             right: 60px;
+            z-index: 2;
             &:before{
                 width: 22px;
                 height: 17px;
@@ -406,25 +408,6 @@ img{
             &:hover{
                 &:before{
                     background-position: -3px -26px;
-                }
-            }
-        }
-        .productBio{ 
-            bottom: 17px;
-            left: 60px;
-            &:before{    
-                width: 19px;
-                height: 19px;            
-                left: -27px;
-                background : {
-                    image: url('../images/casesDemo/productBioSprite.png');
-                    repeat: no-repeat;
-                    position: -5px -5px;
-                }
-            }
-            &:hover{
-                &:before{
-                    background-position: -5px -34px;
                 }
             }
         }

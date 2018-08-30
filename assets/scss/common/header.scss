@@ -81,3 +81,18 @@ header{
         }
     }
 }
+
+.requestCup{
+    position: fixed;
+    margin-left: auto;
+    top: 113px;
+    width: 105px;
+    height: 83px;
+    cursor: pointer;
+    z-index: 2;
+    background : {
+        position: center center;
+        repeat: no-repeat;
+        image: url('../images/common/requestCup.png');
+    }
+}
