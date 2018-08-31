@@ -83,16 +83,24 @@ header{
 }
 
 .requestCup{
+    display: none;
     position: fixed;
-    margin-left: auto;
-    top: 113px;
+    top: 150px;
     width: 105px;
     height: 83px;
+    right: 25px;
     cursor: pointer;
     z-index: 2;
+    transition: transform .3s;
     background : {
         position: center center;
         repeat: no-repeat;
         image: url('../images/common/requestCup.png');
+    }
+}
+
+.modal-open{
+    .requestCup{
+        margin-right: 17px;
     }
 }
