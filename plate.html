@@ -56,12 +56,13 @@
 		</div>
 	</div>
 </header>
+<div class="requestCup" data-target="#modalForm" data-toggle="modal"></div>
 <section id="introVideo" class="plateIntroVideo">
     <div class="container">
         <div class="row">
             <div class="offset-1 col-10">
                 <h1 class="biggestHeader text-center">декорирование тарелок</h1>
-                <button class="opacityButton">Оставить заявку</button>
+                <button class="opacityButton" data-target="#modalForm" data-toggle="modal">Оставить заявку</button>
                 <a class="arrowBottom" href="#">
                     <img src="build/images/index/arrowDown.png" alt="scrollDown">
                 </a>
@@ -69,7 +70,7 @@
         </div>
     </div>
 </section>
-<section id="plate">
+<section id="product" class="plateProduct">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -101,286 +102,258 @@
             <div class="tab-content">
                 <div class="tab-pane  active" id="plates">
                     <div id="easyPaginate" class="row wrapperWrapper">
-                                <div class="col-4">
-                                    <div class="productCardPreview">
-                                        <div class="productCardImage productCardImageFirst">
-                                            <div class="productAddToFavorite">+ в избранное</div>
-                                            <div class="productBio">подробнее</div>
-                                        </div>
-                                        <p class="productName">Декорация водочной бутылки///</p>
-                                        <p class="productSKU">Артикул <span>#7000090</span></p>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
+                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
+                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
+                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                    <div class="productCardImage productCardImageFirst">
+                                        <div class="productAddToFavorite">+ в избранное</div>
                                     </div>
+                                    <p class="productName">Декорация водочной бутылки///</p>
+                                    <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="productCardPreview">
-                                         <div class="productCardImage productCardImageFirst">
-                                            <div class="productAddToFavorite">+ в избранное</div>
-                                            <div class="productBio">подробнее</div>
-                                        </div>
-                                        <p class="productName">Декорация водочной бутылки///</p>
-                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="productCardPreview">
-                                        <div class="productCardImage productCardImageFirst">
-                                            <div class="productAddToFavorite">+ в избранное</div>
-                                            <div class="productBio">подробнее</div>
-                                        </div>
-                                        <p class="productName">Декорация водочной бутылки///</p>
-                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="productCardPreview">
-                                                <div class="productCardImage productCardImageFirst">
-                                                    <div class="productAddToFavorite">+ в избранное</div>
-                                                    <div class="productBio">подробнее</div>
-                                                </div>
-                                                <p class="productName">Декорация водочной бутылки///</p>
-                                                <p class="productSKU">Артикул <span>#7000090</span></p>
-                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="productCardPreview">
-                                                <div class="productCardImage productCardImageFirst">
-                                                    <div class="productAddToFavorite">+ в избранное</div>
-                                                    <div class="productBio">подробнее</div>
-                                                </div>
-                                                <p class="productName">Декорация водочной бутылки///</p>
-                                                <p class="productSKU">Артикул <span>#7000090</span></p>
-                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                            <div class="productCardPreview">
-                                                <div class="productCardImage productCardImageFirst">
-                                                    <div class="productAddToFavorite">+ в избранное</div>
-                                                    <div class="productBio">подробнее</div>
-                                                </div>
-                                                <p class="productName">Декорация водочной бутылки///</p>
-                                                <p class="productSKU">Артикул <span>#7000090</span></p>
-                                            </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                <div class="productCardPreview">
-                                                    <div class="productCardImage productCardImageFirst">
-                                                        <div class="productAddToFavorite">+ в избранное</div>
-                                                        <div class="productBio">подробнее</div>
-                                                    </div>
-                                                    <p class="productName">Декорация водочной бутылки///</p>
-                                                    <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                <div class="productCardPreview">
-                                                    <div class="productCardImage productCardImageFirst">
-                                                        <div class="productAddToFavorite">+ в избранное</div>
-                                                        <div class="productBio">подробнее</div>
-                                                    </div>
-                                                    <p class="productName">Декорация водочной бутылки///</p>
-                                                    <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                <div class="productCardPreview">
-                                                    <div class="productCardImage productCardImageFirst">
-                                                        <div class="productAddToFavorite">+ в избранное</div>
-                                                        <div class="productBio">подробнее</div>
-                                                    </div>
-                                                    <p class="productName">Декорация водочной бутылки///</p>
-                                                    <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                    <div class="productCardPreview">
-                                                        <div class="productCardImage productCardImageFirst">
-                                                            <div class="productAddToFavorite">+ в избранное</div>
-                                                            <div class="productBio">подробнее</div>
-                                                        </div>
-                                                        <p class="productName">Декорация водочной бутылки///</p>
-                                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                    <div class="productCardPreview">
-                                                        <div class="productCardImage productCardImageFirst">
-                                                            <div class="productAddToFavorite">+ в избранное</div>
-                                                            <div class="productBio">подробнее</div>
-                                                        </div>
-                                                        <p class="productName">Декорация водочной бутылки///</p>
-                                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                    <div class="productCardPreview">
-                                        <div class="productCardImage productCardImageFirst">
-                                            <div class="productAddToFavorite">+ в избранное</div>
-                                            <div class="productBio">подробнее</div>
-                                        </div>
-                                        <p class="productName">Декорация водочной бутылки///</p>
-                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                               <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                    <div class="productCardPreview">
-                                                        <div class="productCardImage productCardImageFirst">
-                                                            <div class="productAddToFavorite">+ в избранное</div>
-                                                            <div class="productBio">подробнее</div>
-                                                        </div>
-                                                        <p class="productName">Декорация водочной бутылки///</p>
-                                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                        <div class="productCardPreview">
-                                                            <div class="productCardImage productCardImageFirst">
-                                                                <div class="productAddToFavorite">+ в избранное</div>
-                                                                <div class="productBio">подробнее</div>
-                                                            </div>
-                                                            <p class="productName">Декорация водочной бутылки///</p>
-                                                            <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                        </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                        <div class="productCardPreview">
-                                                            <div class="productCardImage productCardImageFirst">
-                                                                <div class="productAddToFavorite">+ в избранное</div>
-                                                                <div class="productBio">подробнее</div>
-                                                            </div>
-                                                            <p class="productName">Декорация водочной бутылки///</p>
-                                                            <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                        </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                        <div class="productCardPreview">
-                                                            <div class="productCardImage productCardImageFirst">
-                                                                <div class="productAddToFavorite">+ в избранное</div>
-                                                                <div class="productBio">подробнее</div>
-                                                            </div>
-                                                            <p class="productName">Декорация водочной бутылки///</p>
-                                                            <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                        </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                            <div class="productCardPreview">
-                                                                <div class="productCardImage productCardImageFirst">
-                                                                    <div class="productAddToFavorite">+ в избранное</div>
-                                                                    <div class="productBio">подробнее</div>
-                                                                </div>
-                                                                <p class="productName">Декорация водочной бутылки///</p>
-                                                                <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                            </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                            <div class="productCardPreview">
-                                                                <div class="productCardImage productCardImageFirst">
-                                                                    <div class="productAddToFavorite">+ в избранное</div>
-                                                                    <div class="productBio">подробнее</div>
-                                                                </div>
-                                                                <p class="productName">Декорация водочной бутылки///</p>
-                                                                <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                            </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                            <div class="productCardPreview">
-                                                                <div class="productCardImage productCardImageFirst">
-                                                                    <div class="productAddToFavorite">+ в избранное</div>
-                                                                    <div class="productBio">подробнее</div>
-                                                                </div>
-                                                                <p class="productName">Декорация водочной бутылки///</p>
-                                                                <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                            </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                                <div class="productCardPreview">
-                                                                    <div class="productCardImage productCardImageFirst">
-                                                                        <div class="productAddToFavorite">+ в избранное</div>
-                                                                        <div class="productBio">подробнее</div>
-                                                                    </div>
-                                                                    <p class="productName">Декорация водочной бутылки///</p>
-                                                                    <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                                <div class="productCardPreview">
-                                                                    <div class="productCardImage productCardImageFirst">
-                                                                        <div class="productAddToFavorite">+ в избранное</div>
-                                                                        <div class="productBio">подробнее</div>
-                                                                    </div>
-                                                                    <p class="productName">Декорация водочной бутылки///</p>
-                                                                    <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                                <div class="productCardPreview">
-                                                                    <div class="productCardImage productCardImageFirst">
-                                                                        <div class="productAddToFavorite">+ в избранное</div>
-                                                                        <div class="productBio">подробнее</div>
-                                                                    </div>
-                                                                    <p class="productName">Декорация водочной бутылки///</p>
-                                                                    <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                                    <div class="productCardPreview">
-                                                                        <div class="productCardImage productCardImageFirst">
-                                                                            <div class="productAddToFavorite">+ в избранное</div>
-                                                                            <div class="productBio">подробнее</div>
-                                                                        </div>
-                                                                        <p class="productName">Декорация водочной бутылки///</p>
-                                                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                                    <div class="productCardPreview">
-                                                                        <div class="productCardImage productCardImageFirst">
-                                                                            <div class="productAddToFavorite">+ в избранное</div>
-                                                                            <div class="productBio">подробнее</div>
-                                                                        </div>
-                                                                        <p class="productName">Декорация водочной бутылки///</p>
-                                                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                    </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
+                        <div class="col-4 productCardPreviewWrapper animatable moveUp">
+                            <div class="productCardPreview">
+                                <div class="productCardImage productCardImageFirst">
+                                    <div class="productAddToFavorite">+ в избранное</div>
                                 </div>
-                                <div class="col-4">
-                                                                    <div class="productCardPreview">
-                                                                        <div class="productCardImage productCardImageFirst">
-                                                                            <div class="productAddToFavorite">+ в избранное</div>
-                                                                            <div class="productBio">подробнее</div>
-                                                                        </div>
-                                                                        <p class="productName">Декорация водочной бутылки///</p>
-                                                                        <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                    </div>
-                                </div>
-                                <div class="col-4">
-                                                                        <div class="productCardPreview">
-                                                                            <div class="productCardImage productCardImageFirst">
-                                                                                <div class="productAddToFavorite">+ в избранное</div>
-                                                                                <div class="productBio">подробнее</div>
-                                                                            </div>
-                                                                            <p class="productName">Декорация водочной бутылки///</p>
-                                                                            <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                        </div>
-                                </div>
-                                <div class="col-4">
-                                                                        <div class="productCardPreview">
-                                                                            <div class="productCardImage productCardImageFirst">
-                                                                                <div class="productAddToFavorite">+ в избранное</div>
-                                                                                <div class="productBio">подробнее</div>
-                                                                            </div>
-                                                                            <p class="productName">Декорация водочной бутылки///</p>
-                                                                            <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                        </div>
-                                </div>
-                                <div class="col-4">
-                                                                        <div class="productCardPreview">
-                                                                            <div class="productCardImage productCardImageFirst">
-                                                                                <div class="productAddToFavorite">+ в избранное</div>
-                                                                                <div class="productBio">подробнее</div>
-                                                                            </div>
-                                                                            <p class="productName">Декорация водочной бутылки///</p>
-                                                                            <p class="productSKU">Артикул <span>#7000090</span></p>
-                                                                        </div>
-                                </div>
+                                <p class="productName">Декорация водочной бутылки///</p>
+                                <p class="productSKU">Артикул <span>#7000090</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="tab-pane" id="bowls">
@@ -516,8 +489,6 @@
                             </div>
                             <p class="position">основатель "Nobius"</p>
                             <p class="review">Рюмки, стопки и шоты, расписанные индивидуально, украсят любое застолье, а также станут превосходным подарком. Вы с гордостью можете преподнести своим партнерам и клиентам эти полезные, украшенные логотипом вашей компании сувениры.</p>
-                            <!-- <div class="control controlLeft"></div>
-                            <div class="control controlRight"></div> -->
                         </div> 
                     </div>
                     <div>
@@ -566,7 +537,7 @@
 						<div class="form-group">
 							<textarea class="form-control" id="textholder" placeholder="Сообщение"></textarea>
 						</div>
-						<button type="submit" class="btn btn-primary">Отправить</button>
+						<button type="submit">Отправить</button>
 					</form>
 				</div>
 			</div>
@@ -673,7 +644,35 @@
 				<p class="idea">Designed & Developed by <a href="https://ideadigital.agency/" target="_blank">Idea Digital Agency</a></p>
 			</div>
 		</div>
-	</div>
+    </div>
+    <div class="modal fade" id="modalForm">
+	    <div class="modal-dialog modal-dialog-centered">
+	      	<div class="modal-content">
+                <button class="close-button close" type="button" data-dismiss="modal" aria-hidden="true"> </button>
+                <div class="modal-heading text-center">Оставить заявку</div>
+                <div class="modal-heading text-center hidden">Спасибо!</div>
+                <p class="modal-sub-heading text-center">Оставьте заявку и наш менеджер свяжется с Вами</p>
+                <p class="modal-sub-heading text-center hidden">Ваша заявка успешно отправлена</p>
+                <div class="form-wrapper">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Имя*">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" placeholder="Номер телефона*">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Почта">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Комментарий"></textarea>
+                        </div>
+                        <button type="submit">Отправить</button>
+                      </form>
+                  </div>
+	      	</div>
+	    </div>
+  	</div>
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>

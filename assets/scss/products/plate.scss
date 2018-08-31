@@ -2,7 +2,7 @@
     background-image: url('../images/product/backgroundPlate.jpg') !important;
 }
 
-#plate{
+.plateProduct{
     margin-bottom: 70px;
     .nav-tabs{
         justify-content: center;
@@ -27,8 +27,14 @@
     .tab-content{
         width: 100%;
         padding: 0 15px;
-        .col-4{
+        .productCardPreviewWrapper{
             min-width: auto !important;
+            &:nth-child(-n+3){
+                animation-name: unset !important;
+            }
+        }
+        .visible{
+            visibility: visible !important;
         }
         .easyPaginateNav{
             display: flex;

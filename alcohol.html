@@ -59,6 +59,7 @@
 		</div>
 	</div>
 </header>
+<div class="requestCup" data-target="#modalForm" data-toggle="modal"></div>
 <section id="introVideo">
 	<div class="container">
 		<div class="row">
@@ -212,7 +213,7 @@
 						<div class="form-group">
 							<textarea class="form-control" id="textholder" placeholder="Сообщение"></textarea>
 						</div>
-						<button type="submit" class="btn btn-primary">Отправить</button>
+						<button type="submit">Отправить</button>
 					</form>
 				</div>
 			</div>
@@ -317,6 +318,34 @@
 			</div>
 			<div class="offset-5 col-4">
 				<p class="idea">Designed & Developed by <a href="https://ideadigital.agency/" target="_blank">Idea Digital Agency</a></p>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="modalForm">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button class="close-button close" type="button" data-dismiss="modal" aria-hidden="true"> </button>
+				<div class="modal-heading text-center">Оставить заявку</div>
+				<div class="modal-heading text-center hidden">Спасибо!</div>
+				<p class="modal-sub-heading text-center">Оставьте заявку и наш менеджер свяжется с Вами</p>
+				<p class="modal-sub-heading text-center hidden">Ваша заявка успешно отправлена</p>
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Имя*">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" placeholder="Номер телефона*">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Почта">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Комментарий"></textarea>
+						</div>
+						<button type="submit">Отправить</button>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>

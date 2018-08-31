@@ -57,7 +57,52 @@ img{
     }
 }
 
-/* common group of elements */
+/*form сommon elemets */
+
+.form-group{
+    &:last-of-type{
+        margin-bottom: 50px;
+    }
+    .form-control{
+        padding: 15px 25px;
+        border-radius: $radius;
+        font-size: 14px;
+        color: $brand-black;
+        &:focus, &:active{
+            outline: none;
+            box-shadow: none;
+            border-color: $brand-green;
+        }
+    }
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $brand-grey;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        color: $brand-grey;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        color: $brand-grey;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        color: $brand-grey;
+    }
+}
+button{
+    @extend .buttonStyles;
+    display: block;
+    border: 1px solid $brand-green;
+    color: $white;
+    background-color: $brand-green;  
+    &:focus, &:active{
+        border-color: $brand-green;
+    }
+    &:hover{
+        background-color: transparent; 
+        color: $brand-green; 
+    }
+}
+
+/* common groups of elements */
 
 /* form block. common for pages */
 #form{
@@ -91,44 +136,6 @@ img{
         form{
             max-width: 360px;
             margin: 0 auto;
-            .form-group{
-                &:last-of-type{
-                    margin-bottom: 50px;
-                }
-                .form-control{
-                    padding: 15px 25px;
-                    border-radius: $radius;
-                    font-size: 14px;
-                    color: $brand-black;
-                    &:focus, &:active{
-                        outline: none;
-                        box-shadow: none;
-                        border-color: $brand-green;
-                    }
-                }
-                ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-                    color: $brand-grey;
-                }
-                ::-moz-placeholder { /* Firefox 19+ */
-                    color: $brand-grey;
-                }
-                :-ms-input-placeholder { /* IE 10+ */
-                    color: $brand-grey;
-                }
-                :-moz-placeholder { /* Firefox 18- */
-                    color: $brand-grey;
-                }
-            }
-            button{
-                @extend .buttonStyles;
-                display: block;
-                border: 1px solid $brand-green;
-                color: $white;
-                background-color: $brand-green;  
-                &:focus, &:active{
-                    border-color: $brand-green;
-                }
-            }
         }
     }
 }
@@ -136,6 +143,7 @@ img{
 /* styles common 4 all products */
 #product{
     margin-bottom: 127px;
+    
     .rowExtended{
         margin: 0 0 0 0;
     }
@@ -167,7 +175,6 @@ img{
                 transition: transform 1s;
             }
         }
-
         .layout{
             position: absolute;
             top: 0;
@@ -393,6 +400,7 @@ img{
         .productAddToFavorite{
             top: 17px;
             right: 60px;
+            z-index: 2;
             &:before{
                 width: 22px;
                 height: 17px;
@@ -406,25 +414,6 @@ img{
             &:hover{
                 &:before{
                     background-position: -3px -26px;
-                }
-            }
-        }
-        .productBio{ 
-            bottom: 17px;
-            left: 60px;
-            &:before{    
-                width: 19px;
-                height: 19px;            
-                left: -27px;
-                background : {
-                    image: url('../images/casesDemo/productBioSprite.png');
-                    repeat: no-repeat;
-                    position: -5px -5px;
-                }
-            }
-            &:hover{
-                &:before{
-                    background-position: -5px -34px;
                 }
             }
         }
