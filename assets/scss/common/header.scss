@@ -8,6 +8,7 @@ header{
     opacity: 0;
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
+    border-bottom: 1px solid $product-background-grey;
     .flexWrapperLeft{
         flex-direction: row;
         justify-content: flex-start;

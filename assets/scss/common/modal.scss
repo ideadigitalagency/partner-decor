@@ -15,7 +15,10 @@
                 repeat: no-repeat;
                 image: url('../images/common/closePopup.png');
             }
-
+            &:hover, &:focus{
+                box-shadow: none;
+                outline: none;
+            }
         }
         .modal-heading{
             font-size: 21px;

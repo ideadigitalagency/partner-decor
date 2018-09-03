@@ -16,6 +16,51 @@ $(window).scroll(function() {
 //     $('.header').addClass('removeOpacity');
 // });
 
+// $(document).ready(function(){
+//     $('.header').addClass('removeOpacity');
+// });
+
+const $firstPoint = $('.firstPreviewRow');
+const $alcoholPoint = $('.alcoholPreviewRow');
+const $nonAlcoholPoint = $('.nonAlcoholPreviewRow');
+
+$firstPoint.waypoint(function(direction){
+    if (direction == 'down'){
+        var elementGrey = $('.grey');
+        var elementYellow = $('.yellow');
+        var elementOrange = $('.orange');
+        var elementGreen = $('.green');
+        setTimeout(function(){elementGrey.addClass('scaleFull');}, 1000);
+        setTimeout(function(){elementYellow.addClass('scaleFull');}, 2000);
+        setTimeout(function(){elementOrange.addClass('scaleFull');}, 3000);
+        setTimeout(function(){elementGreen.addClass('scaleFull');}, 4000);
+    }
+}, {offset: 750});
+
+$alcoholPoint.waypoint(function(direction){
+    if (direction == 'down'){
+        var elementGrey = $('.grey');
+        var elementYellow = $('.yellow');
+        var elementOrange = $('.orange');
+        var elementGreen = $('.green');
+        setTimeout(function(){elementGrey.addClass('scaleFull');}, 1000);
+        setTimeout(function(){elementYellow.addClass('scaleFull');}, 2000);
+        setTimeout(function(){elementOrange.addClass('scaleFull');}, 3000);
+        setTimeout(function(){elementGreen.addClass('scaleFull');}, 4000);
+    }
+}, {offset: 750});
+
+$nonAlcoholPoint.waypoint(function(direction){
+    if (direction == 'down'){
+        var elementBlue = $('.blue');
+        var elementGrey = $('.grey');
+        var elementBlueDarken = $('.blueDarken');
+        setTimeout(function(){elementBlue.addClass('scaleFull');}, 1000);
+        setTimeout(function(){elementGrey.addClass('scaleFull');}, 2000);
+        setTimeout(function(){elementBlueDarken.addClass('scaleFull');}, 3000);
+    }
+}, {offset: 750});
+
 $(document).ready(function(){
     var element = $('.header');
     setTimeout(function(){element.addClass('removeOpacity');}, 1000);
