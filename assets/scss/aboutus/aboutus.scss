@@ -1,0 +1,312 @@
+#aboutUsIntro{
+    background : {
+        size: cover;
+        repeat: no-repeat;
+        position: center center; 
+        image: url('../images/aboutus/backgroundAboutUs.jpg');
+    }
+}
+
+#aboutUsDescription{
+    margin-bottom: 100px;
+    h1{
+        color: $black;
+    }
+    p{
+        color: $black;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 35px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+#aboutUsStats{
+    margin-bottom: 95px;
+    h2{
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+        color: $black;
+    }
+    .numberDataWrapper{
+        .number{
+            color: $brand-green;
+            font-size: 130px;
+            font-weight: 800;
+            width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+            width: -moz-max-content;    /* Firefox/Gecko */
+            width: -webkit-max-content; /* Chrome */
+            position: relative;
+            opacity: 0.75;
+        }
+        .numberData{
+            position: absolute;
+            top: 48%;
+            right: 25%;
+            font-size: 21px;
+            font-weight: 600;
+        }
+    }
+}
+
+#aboutUsGallery{
+    margin-bottom: 90px;
+    .owl-prev, .owl-next{
+        &:focus{
+            outline: none;
+        }
+    }
+    .owl-nav{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        &:before, &:after{
+            position: absolute;
+            content: '';
+            display: block;
+            
+            top: 50%;
+            width: 405px;
+            height: 1px;
+            background: $product-background-grey;
+        }
+        &:before{
+            left: 0;
+        }
+        &:after{
+            right: 0;
+        }
+        .control{
+            border-radius: 50%;
+            border: 1px solid $brand-green;
+            width: 70px;
+            height: 70px;
+            margin: 0 20px;
+            background : {
+                repeat: no-repeat;
+                position: center center;
+            }
+            //position: absolute;
+            //top: 190px;
+            cursor: pointer;
+        }
+        .controlLeft{
+            background-image: url('../images/common/arrowLeft.png');
+            //left: 0;
+            //right: auto;
+        }
+        .controlRight{
+            background-image: url('../images/common/arrowRight.png');
+            //right: 0;
+            //left: auto;
+        }
+    }
+}
+
+#aboutUsOffers{
+    margin-bottom: 85px;
+    h2{
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+        color: $black;
+        margin-bottom: 45px;
+    }
+    .subText{
+        font-size: 21px;
+        color: $black;
+        margin-bottom: 50px;
+    }
+    .aboutUsOffersWrapper{
+        display: flex;
+        flex-flow: row wrap;
+        .aboutUsOfferSingle{
+            width: 350px;
+            height: 220px;
+            margin-right: 30px;
+            margin-bottom: 30px;
+            padding: 25px 30px;
+            text-align: center;
+            &:first-child{
+                background-color: $product-background-green;
+                .icon{
+                    background-position: -80px -170px;
+                }
+            }
+            &:nth-child(2){
+                background-color: $product-background-orange;
+                .icon{
+                    background-position: 0 0;
+                }
+                
+            }
+            &:nth-child(3){
+                background-color: $product-background-yellow;
+                margin-right: 0;
+                .icon{
+                    background-position: 0 -170px;
+                }
+            }
+            &:nth-child(4){
+                background-color: $brand-dark-blue;
+                .icon{
+                    background-position: -80px 0;
+                }
+                
+            }
+            &:nth-child(5){
+                background-color: $brand-blue;
+                .icon{
+                    background-position: -80px -85px;
+                }
+            }
+            &:last-child{
+                background-color: $product-background-grey;
+                margin-right: 0;
+                .icon{
+                    background-position: -0px -85px;
+                }
+
+            }
+            .icon{
+                margin: 0 auto 10px;
+                width: 80px;
+                height: 85px;
+                background : {
+                    image: url('../images/aboutus/iconsSprite.png');
+                    repeat: no-repeat;
+                }
+            }
+            .separator{
+                margin: 0 auto 10px;
+            }
+            .aboutUsText{
+                padding-top: 10px;
+                color: $white;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+    }
+}
+
+#aboutUsVideoReply{
+    h2{
+        font-size: 40px;
+        text-transform: uppercase;
+        margin-bottom: 70px;
+        color: $black;
+    }
+    .owl-prev, .owl-next{
+        &:focus{
+            outline: none;
+        }
+    }
+    .owl-nav{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        &:before, &:after{
+            position: absolute;
+            content: '';
+            display: block;
+            
+            top: 50%;
+            width: 405px;
+            height: 1px;
+            background: $product-background-grey;
+        }
+        &:before{
+            left: 0;
+        }
+        &:after{
+            right: 0;
+        }
+        .control{
+            border-radius: 50%;
+            border: 1px solid $brand-green;
+            width: 70px;
+            height: 70px;
+            margin: 0 20px;
+            background : {
+                repeat: no-repeat;
+                position: center center;
+            }
+            cursor: pointer;
+        }
+        .controlLeft{
+            background-image: url('../images/common/arrowLeft.png');
+        }
+        .controlRight{
+            background-image: url('../images/common/arrowRight.png');
+        }
+    }
+    .owl-item{
+        .flexWrapper{
+            display: flex;
+            flex-flow: row wrap;
+            .videoBlock{
+                width: 50%;
+            }
+            .textBlock{
+                width: 50%;
+                padding: 80px 0 0 95px;
+                position: relative;
+                &:before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 95px;
+                    top: 0;
+                    width: 59px;
+                    height: 43px;
+                    background : {
+                        position: center center;
+                        repeat: no-repeat;
+                        image: url('../images/common/citate.png');
+                    }
+                }
+                &:after{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    right: 0;
+                    top: 23px;
+                    width: calc(100% - 193px);
+                    height: 2px;
+                    background-color: $product-background-grey;
+                    // background : {
+                    //     position: center center;
+                    //     repeat: no-repeat;
+                    //     image: url('../images/common/citate.png');
+                    // }
+                }
+                //padding-left: 95px;
+                .name{
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    margin-bottom: 11px;
+                }
+                .position{
+                    font-size: 18px;
+                    color: $black;
+                    font-weight: 500;
+                    margin-bottom: 30px;
+                }
+                .review{
+                    font-size: 16px;
+                    font-style: italic;
+                    color: $black;
+                }                
+            }
+        }
+    }
+}

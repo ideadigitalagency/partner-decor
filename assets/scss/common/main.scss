@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&subset=cyrillic');
 html, body, div, span, p, header, footer, section, h1, h2, h3, h4, h5, h6, ul, li, form, input, textarea, button, a, ol, a:hover, a:focus {
     font-family: 'Montserrat', sans-serif;
     color: $brand-black;
@@ -22,7 +22,7 @@ body{
     display: none !important;
 }
 
-/* untypical pahe heading*/
+/* untypical page heading*/
 .pageHeadingNo{
     font-size: 55px;
     font-weight: 800;
@@ -83,44 +83,6 @@ img{
 
 }
 
-/* logos in footer */
-// .logo{
-//     display: block;
-//     position: relative;
-//     width: 54px;
-//     height: 54px;
-//     border-radius: 50%;
-//     border: 1px solid $brand-grey;
-//     margin-bottom: 0;
-//     transition: all .5s ease-out;
-//     -webkit-transition: all .5s ease-out;
-//     &:hover{
-//         border-color: $brand-green;
-//         g{
-//             fill: $brand-green;
-//         }
-//     }
-//     svg{
-//         //display: block;
-//         max-width: 50%;
-//         max-height: 50%;
-//         position: absolute;
-//         top: 50%;
-//         -webkit-transform: translateY(-50%);
-//         -ms-transform: translateY(-50%);
-//         transform: translateY(-50%);
-//         left: 0;
-//         right: 0;
-//         margin: auto;
-//         text-align: center;
-//         g{
-//             transition: all .5s ease-out;
-//             -webkit-transition: all .5s ease-out;
-//             fill: $brand-grey;
-//         }
-//     }
-// }
-
 /*form сommon elemets */
 
 .form-group{
@@ -168,6 +130,56 @@ img{
 }
 
 /* common groups of elements */
+
+/* same page intros */
+.commonSectionHeading{
+    min-height: calc(100vh - 94px);
+    padding-top: 225px;
+    position: relative;
+    &:hover{
+        button{
+            transform: scale(1);
+        }
+    }
+    button{
+        @extend .buttonStyles;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -112.5px;
+        display: block;
+        border: 1px solid $brand-green;
+        color: $white;
+        background-color: $brand-green;
+        transform: scale(0);
+        &:hover{
+            background-color: transparent;
+        }
+    }
+    .arrowBottom{
+        display: block;
+        width: intrinsic;
+        width: -moz-max-content;
+        width: -webkit-max-content;
+
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+    }
+    .biggestHeader{
+        font-weight: 300;
+        font-size: 55px;
+        text-transform: uppercase;
+        color: $white;
+        margin-bottom: 145px;
+        @media screen and (min-width: 1440px){
+            margin-bottom: 250px;
+        }
+        opacity: 0;
+        -webkit-transition: opacity 1s;
+        transition: opacity 1s;
+    }
+}
 
 /* form block. common for pages */
 #form{
@@ -482,12 +494,12 @@ img{
                 background : {
                     image: url('../images/casesDemo/productMoreSprite.png'); 
                     repeat: no-repeat;
-                    position: -3px -3px;
+                    position: top center;
                 }                    
             }
             &:hover{
                 &:before{
-                    background-position: -3px -26px;
+                    background-position: bottom center;
                 }
             }
         }

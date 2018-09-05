@@ -9,6 +9,7 @@ header{
     transition: opacity 1s;
     -webkit-transition: opacity 1s;
     border-bottom: 1px solid $product-background-grey;
+    //max-height: 95px;
     .flexWrapperLeft{
         flex-direction: row;
         justify-content: flex-start;
@@ -335,6 +336,28 @@ header{
                     transition: all .5s ease-out;
                     -webkit-transition: all .5s ease-out;
                     fill: $brand-grey;
+                }
+            }
+        }
+    }
+    .languageSwitcher{
+        position: absolute;
+        top: 35px;
+        right: 25px;
+        width: 105px;
+        height: 20px;
+        //background-color: $brand-black;
+        ul{
+            list-style: none;
+            display: flex;
+            li{
+                padding: 0 10px;
+                a{
+                    color: $black;
+                    font-size: 13px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    cursor: pointer;
                 }
             }
         }

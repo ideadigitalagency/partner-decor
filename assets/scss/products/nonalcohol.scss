@@ -1,55 +1,9 @@
 #introVideo{
-    min-height: calc(100vh - 94px);
-    padding-top: 225px;
-    position: relative;
     background : {
         position: center center;
         size: cover;
         repeat: no-repeat;
         image: url('../images/product/background.jpg');
-    }
-    &:hover{
-        button{
-            transform: scale(1);
-        }
-    }
-    .biggestHeader{
-        font-weight: 300;
-        font-size: 55px;
-        text-transform: uppercase;
-        color: $white;
-        margin-bottom: 145px;
-        @media screen and (min-width: 1440px){
-            margin-bottom: 250px;
-        }
-        opacity: 0;
-        -webkit-transition: opacity 1s;
-        transition: opacity 1s;
-    }
-    button{
-        @extend .buttonStyles;
-        position: absolute;
-        bottom: -30%;
-        left: 50%;
-        margin-left: -112.5px;
-        display: block;
-        border: 1px solid $brand-green;
-        color: $white;
-        background-color: $brand-green;
-        transform: scale(0);
-        &:hover{
-            background-color: transparent;
-        }
-    }
-    .arrowBottom{
-        display: block;
-        width: intrinsic;
-        width: -moz-max-content;
-        width: -webkit-max-content;
-
-        position: absolute;
-        bottom: -45%;
-        left: 50%;
     }
 }
 

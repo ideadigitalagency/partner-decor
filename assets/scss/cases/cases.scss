@@ -7,7 +7,7 @@
             width: 43%;
             height: 460px;
             padding: 85px 80px 30px;
-            background-color: $brand-green;
+            background-color: $product-background-green;
             position: relative;
             margin-bottom: 40px;
             .caseHeading{
@@ -32,20 +32,26 @@
                 margin-bottom: 60px;
             }
             .caseLink{
-                @extend .buttonStyles;
-                display: block;
-                border: 1px solid $white;
-                background-color: $white;
-                padding: 11px 35px;
-                font-size: 11px;
-                color: $brand-green;
-                width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-                width: -moz-max-content;    /* Firefox/Gecko */
-                width: -webkit-max-content; /* Chrome */
-                &:hover{
-                    background-color: $brand-green;
-                    color: $white;
-                }
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $white;
+                border-bottom: 1px solid $white;
+                //text-decoration: underline;
+                // @extend .buttonStyles;
+                // display: block;
+                // border: 1px solid $white;
+                // background-color: $white;
+                // padding: 11px 35px;
+                // font-size: 11px;
+                // color: $brand-green;
+                // width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+                // width: -moz-max-content;    /* Firefox/Gecko */
+                // width: -webkit-max-content; /* Chrome */
+                // &:hover{
+                //     background-color: $brand-green;
+                //     color: $white;
+                // }
             }
         }
         .caseImageLink{

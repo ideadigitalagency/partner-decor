@@ -21,4 +21,24 @@ $('.sliderWithThumb').owlCarousel({
     dots: false,
     thumbs: true,
     thumbsPrerendered: true
-  });
+});
+
+$('.aboutUsRepliesWrapper').owlCarousel({
+    items: 1,
+    center: true,
+    dots: false,
+    touchDrag: true,
+    loop:true,
+    nav:true,
+    navText : ['<div class="control controlLeft"></div>','<div class="control controlRight"></div>']
+});
+
+$('.aboutUsVideoRepliesWrapper').owlCarousel({
+    items: 1,
+    center: true,
+    dots: false,
+    touchDrag: false,
+    loop:true,
+    nav:true,
+    navText : ['<div class="control controlLeft"></div>','<div class="control controlRight"></div>']
+}); 
