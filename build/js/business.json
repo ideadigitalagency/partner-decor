@@ -1,0 +1,33 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+
+        {
+            "type": "Main",
+            "properties": {
+                "Name": "Офис",
+                "BusType": "Main",
+                "Description": "ул. Якова Самарского, 7"
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.055115, 48.463811]
+            }
+        },
+        {
+            "type": "Production",
+            "properties": {
+                "Name": "Производство",
+                "BusType": "Production",
+                "Description": "ул. Маршала Малиновского, 114"
+
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.114804, 48.470230]
+            }
+        }
+
+    ]
+}

@@ -7,10 +7,30 @@ $(document).ready(function(){
 $(window).scroll(function() {
     if ($(this).scrollTop() > 799) {
       $('.requestCup').fadeIn();
-  }else {
+    }else {
         $('.requestCup').fadeOut();
   }
 });
+
+
+$('#nav-icon3').click(function(){
+    $('#menu').toggleClass('makeVisible') && $('header').toggleClass('headerAdditions') && $('body').toggleClass('disableBodyScroll');
+})
+
+$('.productCategoryList').click(function(){
+    $('#productMenu').toggleClass('productMenuShow') && $('.arrowDown').toggleClass('arrowDownRotated');
+})
+
+$('.searchIcon').click(function(){
+    $('.formForm').toggleClass('hide');
+})
+
+
+
+// $('.closeButton').click(function(){
+//     $('#menu').removeClass('makeVisible');
+// })
+
 
 // $(document).ready(function(){
 //     $('.header').addClass('removeOpacity');
@@ -67,13 +87,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    var element = $('.smallHeading');
-    setTimeout(function(){element.addClass('removeOpacity');}, 2000);
-});
-
-$(document).ready(function(){
-    var element = $('.pictureLayout');
-    setTimeout(function(){element.addClass('removeOpacity');}, 3000);
+    var element = $('.bigHeading');
+    setTimeout(function(){element.removeClass('hide');}, 2000);
 });
 
 $(document).ready(function(){
@@ -81,40 +96,64 @@ $(document).ready(function(){
     setTimeout(function(){element.addClass('removeOpacity');}, 3000);
 });
 
+$(document).ready(function(){
+    var element = $('.pictureLayout');
+    setTimeout(function(){element.addClass('removeOpacity');}, 3500);
+});
 
+$(document).ready(function(){
+    var element = $('.smallHeading');
+    setTimeout(function(){element.addClass('removeOpacity');}, 4500);
+});
+
+$(document).ready(function(){
+    var element = $('.opacityButton');
+    setTimeout(function(){element.addClass('removeOpacity');}, 5500);
+});
 // $(document).ready(function(){
 //     //var element = $('.bigHeading');
 //     setTimeout(function(){element.addClass('removeOpacity');}, 4000);
 // });
 
-$(document).ready(function(){
-    var element = $('.opacityButton');
-    setTimeout(function(){element.addClass('removeOpacity');}, 5000);
-});
 
-const $box = $('.smallerHeading');
+const $box3 = $('.formWrapper');
+const $box = $('h2.smallerHeading');
+const $box15 = $('p.smallerHeading');
 const $box1 = $('.introForm');
 const $box2 = $('.treeImage');
+
+
+
+$box3.waypoint(function(direction){
+    if (direction == 'down'){
+        setTimeout(function(){$box3.addClass('colored');}, 200);
+        //$box3.addClass('colored')
+    }
+}, {offset: '600px'});
 
 $box.waypoint(function(direction){
     if (direction == 'down'){
         $box.addClass('removeOpacity')
     }
-}, {offset: '44%'});
+}, {offset: '600px'});
 
-$box.waypoint(function(direction){
+$box15.waypoint(function(direction){
+    if (direction == 'down'){
+    setTimeout(function(){$box15.addClass('removeOpacity');}, 1000);
+    }
+}, {offset: '600px'});
+
+$box1.waypoint(function(direction){
     if (direction == 'down'){
         setTimeout(function(){$box1.addClass('removeOpacity');}, 2000);
-        //$box1.addClass('removeOpacity')
     }
-}, {offset: '44%'});
+}, {offset: '950px'});
 
-$box.waypoint(function(direction){
+$box2.waypoint(function(direction){
     if (direction == 'down'){
-        //$box2.addClass('removeOpacity')
         setTimeout(function(){$box2.addClass('removeOpacity');}, 3000);
     }
-}, {offset: '44%'});
+}, {offset: '600px'});
 
 $(function() {
     var selectedClass = "";

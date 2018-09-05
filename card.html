@@ -57,75 +57,85 @@
 	</div>
 </header>
 <div class="requestCup" data-target="#modalForm" data-toggle="modal"></div>
-<section id="case" class="casePage">
+<section id="singleProduct">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumbs">
                     <a class="page" href="/">Главная</a>
-                    <a class="currentPage" href="/">Кейсы</a>
+                    <a class="page" href="/">Посуда для алкогольных напитков</a>
+                    <a class="currentPage" href="/">Декорация водочной бутылки</a>
                 </div>
             </div>
         </div>
         <div class="row">
-            <h1 class="pageHeadingNo">Кейсы</h1>
-            <div class="caseWrapper">
-                <a href="#" class="caseImageLink bounceInLeft animatable"></a>
-                <div class="caseDescription text-center bounceInRight animatable">
-                    <p class="caseHeading">Беленькая "Петриковская"</p>
-                    <p class="caseTechnology">Технология</p>
-                    <p class="caseTechnologyContent">химическое матирование с эффектом "окна", шелкотрафаретная печать керамическими красками</p>
-                    <a class="caseLink" href="#">Смотреть</a>
+            <div class="col-5">
+                <div class="sliderWithThumb owl-carousel" data-slider-id="1">
+                    <div data-thumb="Content of your thumbnail (can be anything)"><img src="build/images/casesDemo/vodka.jpg" class="singleProduct"></div>
+                    <div data-thumb="Content of your thumbnail (can be anything)"><img src="build/images/casesDemo/casesDemo2.png" class="singleProduct"></div>
+                    <div data-thumb="Content of your thumbnail (can be anything)"><img src="build/images/casesDemo/casesDemo2.png" class="singleProduct"></div>
+                    <div data-thumb="Content of your thumbnail (can be anything)"><img src="build/images/casesDemo/casesDemo2.png" class="singleProduct"></div>
+                </div>
+                <div class="owl-thumbs" data-slider-id="1">
+                    <button class="owl-thumb-item"><img src="build/images/casesDemo/vodka.jpg"></button>
+                    <button class="owl-thumb-item"><img src="build/images/casesDemo/casesDemo2.png"></button>
+                    <button class="owl-thumb-item"><img src="build/images/casesDemo/casesDemo2.png"></button>
+                    <button class="owl-thumb-item"><img src="build/images/casesDemo/casesDemo2.png"></button>
                 </div>
             </div>
-            <div class="caseWrapper">
-                <div class="caseDescription text-center bounceInLeft animatable">
-                    <p class="caseHeading">Беленькая "Петриковская"</p>
-                    <p class="caseTechnology">Технология</p>
-                    <p class="caseTechnologyContent">химическое матирование с эффектом "окна", шелкотрафаретная печать керамическими красками</p>
-                    <a class="caseLink" href="#">Смотреть</a>
-                </div>
-                <a href="#" class="caseImageLink bounceInRight animatable"></a>
-            </div>
-            <div class="caseWrapper">
-                <a href="#" class="caseImageLink bounceInLeft animatable"></a>
-                <div class="caseDescription text-center bounceInRight animatable">
-                    <p class="caseHeading">Беленькая "Петриковская"</p>
-                    <p class="caseTechnology">Технология</p>
-                    <p class="caseTechnologyContent">химическое матирование с эффектом "окна", шелкотрафаретная печать керамическими красками</p>
-                    <a class="caseLink" href="#">Смотреть</a>
-                </div>
+            <div class="col-7">
+                <h1>Декорация водочной бутылки</h1>
+                <p class="sku">Артикул <span>#7000091</span></p>
+                <p class="descriptionStart">Описание</p>
+                <p class="descriptionValue">Объем: <span class="value">250 мл</span></p>
+                <p class="descriptionValue">Высота: <span class="value">175 см</span></p>
+                <p class="descriptionValue">Материалов: <span class="value">белое глянцевое прозрачное стекло</span></p>
+                <p class="descriptionValue">Минимальный заказ: <span class="value">от 1000 шт.</span></p>
+                <div class="description">Дизайнеры нашей компании разработают логотип, или помогут адаптировать уже имеющуюся символику, технологи на импортном оборудовании быстро выполнят ваш заказ.</div>
+                <button class="butt">Оставить заявку</button>
             </div>
         </div>
     </div>
 </section>
-<section id="form">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="formWrapper animatable fadeBgColor">
-					<img class="treeImage" alt="background" src="build/images/form/formBackgroundImage.png"> 
-					<h2 class="smallerHeading text-center">Остались вопросы?</h2>
-					<p class="smallerHeading text-center">Оставьте заявку и наш менеджер свяжется с Вами</p>
-					<form class="introForm">
-						<div class="form-group">
-							<input type="text" class="form-control" id="name" placeholder="Имя*">
-						</div>
-						<div class="form-group">
-							<input type="tel" class="form-control" id="phone" placeholder="Номер телефона*">
-						</div>
-						<div class="form-group">
-						  	<input type="email" class="form-control" id="email" placeholder="Почта">
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" id="textholder" placeholder="Сообщение"></textarea>
-						</div>
-						<button type="submit" class="classicButton">Отправить</button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+<section id="popularItems" class="singleCard">
+    <div class="container">
+        <h2 class="text-center">Похожие товары</h2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="productCardPreview">
+                        <a href="/">
+                            <div class="productCardImage productCardImageFirst">
+                                <div class="productAddToFavorite">+ в избранное</div>
+                            </div>
+                        </a>
+                        <p class="productName">Декорация водочной бутылки</p>
+                        <p class="productSKU">Артикул <span>#7000090</span></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="productCardPreview">
+                        <a href="/">
+                            <div class="productCardImage productCardImageFirst">
+                                <div class="productAddToFavorite">+ в избранное</div>
+                            </div>
+                        </a>
+                        <p class="productName">Декорация чашки с блюдцем Julia</p>
+                        <p class="productSKU">Артикул <span>#7000091</span></p>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="productCardPreview">
+                        <a href="http://gnatkovsky.com.ua/animaciya-elementov-stranicy-pri-prokrutke.html">
+                            <div class="productCardImage productCardImageFirst" onclick="window.location='http://google.com';">
+                            <div class="productAddToFavorite">+ в избранное</div>
+                        </div>
+                    </a>
+                    <p class="productName">Декорация чашки с блюдцем Landon</p>
+                    <p class="productSKU">Артикул <span>#7000091</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <footer>
 	<div class="container">
@@ -227,49 +237,49 @@
 				<p class="idea">Designed & Developed by <a href="https://ideadigital.agency/" target="_blank">Idea Digital Agency</a></p>
 			</div>
 		</div>
-    </div>
-    <div class="modal fade" id="modalForm">
-	    <div class="modal-dialog modal-dialog-centered">
-	      	<div class="modal-content">
-                <button class="close-button close" type="button" data-dismiss="modal" aria-hidden="true"> </button>
-                <div class="modal-heading text-center">Оставить заявку</div>
-                <div class="modal-heading text-center hidden">Спасибо!</div>
-                <p class="modal-sub-heading text-center">Оставьте заявку и наш менеджер свяжется с Вами</p>
-                <p class="modal-sub-heading text-center hidden">Ваша заявка успешно отправлена</p>
-                <div class="form-wrapper">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Имя*">
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" placeholder="Номер телефона*">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Почта">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" placeholder="Комментарий"></textarea>
-                        </div>
-                        <button type="submit">Отправить</button>
-                      </form>
-                  </div>
-	      	</div>
-	    </div>
-  	</div>
+	</div>
+	<div class="modal fade" id="modalForm">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button class="close-button close" type="button" data-dismiss="modal" aria-hidden="true"> </button>
+				<div class="modal-heading text-center">Оставить заявку</div>
+				<div class="modal-heading text-center hidden">Спасибо!</div>
+				<p class="modal-sub-heading text-center">Оставьте заявку и наш менеджер свяжется с Вами</p>
+				<p class="modal-sub-heading text-center hidden">Ваша заявка успешно отправлена</p>
+				<div class="form-wrapper">
+					<form>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Имя*">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" placeholder="Номер телефона*">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="Почта">
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Комментарий"></textarea>
+						</div>
+						<button type="submit" class="classicButton">Отправить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-<!-- <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+
 
 <script src="build/js/owl.carousel.min.js?v=0.001"></script>
-
-<script src="build/js/easyPaginate.min.js?v=0.001"></script>
+<script src="build/js/jquery.zoom.min.js?v=0.001"></script>
+<script src="build/js/owlThumbs.min.js?v=0.001"></script>
 
 <script src="build/js/scripts.min.js?v=0.001"></script>
+<script src="build/js/zoom.min.js?v=0.001"></script>
 
 <script src="build/js/swiperSlider.min.js?v=0.001"></script>
 <script src="build/js/owlSlider.min.js?v=0.001"></script>

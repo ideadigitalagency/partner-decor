@@ -21,8 +21,8 @@
     .smallHeading{
         font-size: 14px;
         color: $brand-light-grey;
-        margin-bottom: 200px;
-        @media screen and (min-width: 1140px) and(max-width: 1439px){
+        margin-bottom: 225px;
+        @media screen and (max-width: 1439px){
             margin-bottom: 155px;
         }
         opacity: 0;
@@ -30,26 +30,34 @@
         transition: opacity 1s;
     }  
     .bigHeading{
-        background: transparent;
-        height: auto;
-        width: 100%;
         font-size: 62px;
+        // color: transparent;
+        background: transparent;
+        height: 93px;
+        width: 100%;
+        position: relative;
+        display: block;
         &:before{
             content: ''; 
             position: absolute; 
-            background:#fff; 
+            background: $white;
             top: 0px; 
             left: 0px; 
             height: 0px; 
             width: 100%;
-            animation: fadeinText 4s;
+            animation: fadeinText 1.5s;
         }
+    }
+    .black{
+        color: $brand-black !important;
+        transition: all 1.5s linear;
     }   
     h1{
         font-size: 62px;
         font-weight: 800;
         text-transform: uppercase;
         margin-bottom: 170px;
+        letter-spacing: 0.025em;
     }
     button{
         @extend .buttonStyles;
@@ -58,19 +66,19 @@
         color: $white;
         background-color: $brand-green;
         margin-bottom: 35px;
-        transition: background-color .5s ease-out;
-        -webkit-transition: background-color .5s ease-out;
-        transition: color .5s ease-out;
-        -webkit-transition: color .5s ease-out;
+        // transition: background-color .5s ease-out;
+        // -webkit-transition: background-color .5s ease-out;
+        transition: color .5s ease-out, background-color .5s ease-out, opacity 1s;
+        -webkit-transition: color .5s ease-out, background-color .5s ease-out, opacity 1s;
         &:hover{
-            background-color: $white;
-            color: $brand-green;
+            background-color: transparent;
+            color: $white;
         }
     }
     .opacityButton{
         opacity: 0;
-        transition: opacity 1s;
-        -webkit-transition: opacity 1s;
+        // transition: opacity 1s;
+        // -webkit-transition: opacity 1s;
     }
     .arrowBottom{
         display: block;

@@ -15,3 +15,10 @@ $('.caseGalleryWrapper').owlCarousel({
     touchDrag: true,
     loop:true
 });
+
+$('.sliderWithThumb').owlCarousel({
+    items: 1,
+    dots: false,
+    thumbs: true,
+    thumbsPrerendered: true
+  });

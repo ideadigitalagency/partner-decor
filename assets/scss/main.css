@@ -10,5 +10,7 @@
 @import "index/index.scss";
 @import "products/nonalcohol.scss";
 @import "products/plate.scss";
+@import "products/singleProduct.scss";
 @import "cases/cases.scss";
 @import "cases/caseSingle.scss";
+@import "contacts/contacts.scss";

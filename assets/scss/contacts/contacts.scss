@@ -1,0 +1,42 @@
+#contacts{
+    margin-bottom: 60px;
+    .columnHeading{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+    p{
+        font-size: 14px;
+        margin-bottom: 5px;
+        &:last-of-type{
+            margin-bottom: 0px;
+        }
+        a{
+            font-size: 14px;
+            font-weight: 500;
+        }
+        span{
+            font-size: 1em;
+            font-weight: 600;
+        }
+    }
+    #mainIcon, #prodIcon{
+        color: $brand-grey;
+        cursor: pointer;
+        &:hover{
+            color: $brand-green;
+        }
+    }
+    #mainIcon{
+        margin-bottom: 15px;
+    }
+}
+
+#mapWrapper{
+    margin-bottom: 90px;
+    #map{
+        width: 100%;
+        height: 400px;
+    }
+}

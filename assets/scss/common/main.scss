@@ -18,6 +18,10 @@ body{
     overflow-y: scroll;
 }
 
+.hide{
+    display: none !important;
+}
+
 /* untypical pahe heading*/
 .pageHeadingNo{
     font-size: 55px;
@@ -78,6 +82,44 @@ img{
     // -webkit-transition: background-color ease-out 1.5s;
 
 }
+
+/* logos in footer */
+// .logo{
+//     display: block;
+//     position: relative;
+//     width: 54px;
+//     height: 54px;
+//     border-radius: 50%;
+//     border: 1px solid $brand-grey;
+//     margin-bottom: 0;
+//     transition: all .5s ease-out;
+//     -webkit-transition: all .5s ease-out;
+//     &:hover{
+//         border-color: $brand-green;
+//         g{
+//             fill: $brand-green;
+//         }
+//     }
+//     svg{
+//         //display: block;
+//         max-width: 50%;
+//         max-height: 50%;
+//         position: absolute;
+//         top: 50%;
+//         -webkit-transform: translateY(-50%);
+//         -ms-transform: translateY(-50%);
+//         transform: translateY(-50%);
+//         left: 0;
+//         right: 0;
+//         margin: auto;
+//         text-align: center;
+//         g{
+//             transition: all .5s ease-out;
+//             -webkit-transition: all .5s ease-out;
+//             fill: $brand-grey;
+//         }
+//     }
+// }
 
 /*form сommon elemets */
 
@@ -160,6 +202,11 @@ img{
             max-width: 360px;
             margin: 0 auto;
         }
+    }
+    .colored{
+        background-color: rgba(47, 180, 162, 0.15);
+        transition: background-color 1s;
+        -webkit-transition: background-color 1s;
     }
 }
 
