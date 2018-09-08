@@ -197,6 +197,7 @@
 }
 
 #aboutUsVideoReply{
+    margin-bottom: 90px;
     h2{
         font-size: 40px;
         text-transform: uppercase;
@@ -282,30 +283,31 @@
                     width: calc(100% - 193px);
                     height: 2px;
                     background-color: $product-background-grey;
-                    // background : {
-                    //     position: center center;
-                    //     repeat: no-repeat;
-                    //     image: url('../images/common/citate.png');
-                    // }
                 }
-                //padding-left: 95px;
                 .name{
                     font-size: 18px;
                     text-transform: uppercase;
                     font-weight: 700;
                     margin-bottom: 11px;
+                    font-style: normal;
                 }
                 .position{
                     font-size: 18px;
                     color: $black;
                     font-weight: 500;
                     margin-bottom: 30px;
+                    font-style: normal;
                 }
-                .review{
+                p{
                     font-size: 16px;
                     font-style: italic;
                     color: $black;
-                }                
+                }
+                // .review{
+                //     font-size: 16px;
+                //     font-style: italic;
+                //     color: $black;
+                // }                
             }
         }
     }

@@ -20,7 +20,8 @@ $('.sliderWithThumb').owlCarousel({
     items: 1,
     dots: false,
     thumbs: true,
-    thumbsPrerendered: true
+    thumbsPrerendered: true,
+    loop:true
 });
 
 $('.aboutUsRepliesWrapper').owlCarousel({

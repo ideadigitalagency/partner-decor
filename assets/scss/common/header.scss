@@ -90,7 +90,7 @@ header{
     }
     form{
         position: relative;
-        //display: none;
+        display: none;
         &:before{
             position: absolute;
             content: '';
@@ -106,13 +106,29 @@ header{
                 position: -5px -5px;
             }
         }
-        .search-block{
+        label{
+            display: block;
+        }
+        .search-field{
             margin-top: 35px;
             width: 100%;
             border: 1px solid $product-background-grey;
             padding: 15px 15px 15px 50px;
             font-size: 13px;
         }
+        .search-submit, .screen-reader-text{
+            display: none;
+        }
+        // .search-block{
+        //     margin-top: 35px;
+        //     width: 100%;
+        //     border: 1px solid $product-background-grey;
+        //     padding: 15px 15px 15px 50px;
+        //     font-size: 13px;
+        // }
+    }
+    .show{
+        display: block !important;
     }
 }
 
@@ -241,7 +257,7 @@ header{
             }
             &:first-child{
                 &:before{
-                    background-image: url('../images/menu/nonalcohol.png');
+                    background-image: url('../images/menu/nonAlcohol.png');
                 }
             }
             &:nth-child(2){
