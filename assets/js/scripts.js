@@ -12,6 +12,7 @@ $(window).scroll(function() {
   }
 });
 
+/* click events */
 
 $('#nav-icon3').click(function(){
     $('#menu').toggleClass('makeVisible') && $('header').toggleClass('headerAdditions') && $('body').toggleClass('disableBodyScroll');
@@ -22,21 +23,18 @@ $('.productCategoryList').click(function(){
 })
 
 $('.searchIcon').click(function(){
-    $('.formForm').toggleClass('hide');
+    $('.header form').toggleClass('show');
 })
 
-// $('.closeButton').click(function(){
-//     $('#menu').removeClass('makeVisible');
-// })
+$('.searchIcon').click(function(){
+    $('.header form').toggleClass('show');
+})
 
+$('.mapSwitcher').click(function(){
+    $('.mapSwitcher').toggleClass('green');
+})
 
-// $(document).ready(function(){
-//     $('.header').addClass('removeOpacity');
-// });
-
-// $(document).ready(function(){
-//     $('.header').addClass('removeOpacity');
-// });
+/* end of click events */
 
 const $firstPoint = $('.firstPreviewRow');
 const $alcoholPoint = $('.alcoholPreviewRow');

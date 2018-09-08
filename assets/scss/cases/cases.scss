@@ -3,10 +3,19 @@
     .caseWrapper{
         display: inline-flex;
         width: 100%;
+        &:nth-child(odd){
+            .caseDescription{
+                order: 1;
+            }
+            .caseImageLink{
+                order: 2;
+            }
+        }
         .caseDescription{
             width: 43%;
             height: 460px;
-            padding: 85px 80px 30px;
+            //padding: 85px 80px 30px;
+            padding: 85px 60px 30px;
             background-color: $product-background-green;
             position: relative;
             margin-bottom: 40px;
@@ -25,7 +34,7 @@
                 letter-spacing: 0.1em;
                 margin-bottom: 21px;
             }
-            .caseTechnologyContent{
+            p{
                 font-size: 14px;
                 color: $white;
                 letter-spacing: 0.1em;

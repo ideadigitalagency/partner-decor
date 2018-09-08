@@ -1,5 +1,21 @@
 footer{
     margin-bottom: 55px;
+    .navigationMenuBottom{
+        list-style: none;
+        margin-bottom: 50px;
+        a{
+            display: block;
+            font-weight: 600;
+            transition: all .5s ease-out;
+            -webkit-transition: all .5s ease-out;
+            &:hover{
+                color: $brand-green;
+            }
+            &:last-child{
+                //margin-bottom: 50px;
+            }
+        }
+    }
     a{
         font-size: 14px;
         margin-bottom: 15px;

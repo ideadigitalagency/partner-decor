@@ -62,9 +62,11 @@
     .description{
         max-width: 430px;
         width: 100%;
-        font-size: 14px;
-        color: $brand-grey;
-        line-height: 1.5em;
+        p{
+            font-size: 14px;
+            color: $brand-grey;
+            line-height: 1.5em;
+        }
         margin-bottom: 45px;
 
     }

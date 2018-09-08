@@ -3,7 +3,7 @@
     "features": [
 
         {
-            "type": "Main",
+            "type": "Feature",
             "properties": {
                 "Name": "Офис",
                 "BusType": "Main",
@@ -16,7 +16,7 @@
             }
         },
         {
-            "type": "Production",
+            "type": "Feature",
             "properties": {
                 "Name": "Производство",
                 "BusType": "Production",

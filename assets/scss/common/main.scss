@@ -112,6 +112,24 @@ img{
     :-moz-placeholder { /* Firefox 18- */
         color: $brand-grey;
     }
+    .classicButton{
+        @extend .buttonStyles;
+        display: block;
+        border: 1px solid $brand-green;
+        color: $white;
+        background-color: $brand-green;  
+        &:focus, &:active{
+            border-color: $brand-green;
+        }
+        &:hover{
+            background-color: transparent; 
+            color: $brand-green; 
+        }
+    }
+}
+
+.message{
+    margin-bottom: 50px;
 }
 
 .classicButton{
@@ -127,6 +145,10 @@ img{
         background-color: transparent; 
         color: $brand-green; 
     }
+}
+
+.alert-success{
+    display: none !important;
 }
 
 /* common groups of elements */
@@ -355,6 +377,7 @@ img{
                     background-position: 0;
                     background-size: 200%;
                     -webkit-transition: all 1s;
+                    font-style: normal;
                     transition: all 1s;
                     &:hover{
                         background-position: -100%;
@@ -366,8 +389,9 @@ img{
                 color: $black;
                 font-weight: 500;
                 margin-bottom: 41px;
+                font-style: normal;
             }
-            .review{
+            p{
                 font-size: 16px;
                 font-style: italic;
                 color: $black;
