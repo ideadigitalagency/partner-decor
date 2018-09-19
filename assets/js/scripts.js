@@ -15,6 +15,9 @@ $(window).scroll(function() {
 /* click events */
 
 $('#nav-icon3').click(function(){
+    if ($('#productMenu').is('.productMenuShow')) {
+        $('#productMenu').toggleClass('productMenuShow') && $('.arrowDown').toggleClass('arrowDownRotated');
+    }
     $('#menu').toggleClass('makeVisible') && $('header').toggleClass('headerAdditions') && $('body').toggleClass('disableBodyScroll');
 })
 
@@ -26,32 +29,46 @@ $('.searchIcon').click(function(){
     $('.header form').toggleClass('show');
 })
 
-$('.searchIcon').click(function(){
-    $('.header form').toggleClass('show');
-})
-
 $('.mapSwitcher').click(function(){
     $('.mapSwitcher').toggleClass('green');
+})
+
+$('.close-button-menu').click(function(){
+    $('#productMenu').toggleClass('productMenuShow') && $('.arrowDown').toggleClass('arrowDownRotated');
 })
 
 /* end of click events */
 
 const $firstPoint = $('.firstPreviewRow');
+const $secondPoint = $('.secondPreviewRow');
 const $alcoholPoint = $('.alcoholPreviewRow');
 const $nonAlcoholPoint = $('.nonAlcoholPreviewRow');
 
 $firstPoint.waypoint(function(direction){
     if (direction == 'down'){
-        var elementGrey = $('.grey');
-        var elementYellow = $('.yellow');
-        var elementOrange = $('.orange');
-        var elementGreen = $('.green');
-        setTimeout(function(){elementGrey.addClass('scaleFull');}, 1000);
-        setTimeout(function(){elementYellow.addClass('scaleFull');}, 2000);
-        setTimeout(function(){elementOrange.addClass('scaleFull');}, 3000);
-        setTimeout(function(){elementGreen.addClass('scaleFull');}, 4000);
+        var elementGrey = $('.greyFirst');
+        var elementYellow = $('.yellowFirst');
+        var elementOrange = $('.orangeFirst');
+        var elementGreen = $('.greenFirst');
+        setTimeout(function(){elementGrey.addClass('scaleFull');}, 0000);
+        setTimeout(function(){elementYellow.addClass('scaleFull');}, 1000);
+        setTimeout(function(){elementOrange.addClass('scaleFull');}, 2000);
+        setTimeout(function(){elementGreen.addClass('scaleFull');}, 3000);
     }
-}, {offset: 750});
+}, {offset: '75%'});
+
+$secondPoint.waypoint(function(direction){
+    if (direction == 'down'){
+        var elementGrey = $('.greySecond');
+        var elementYellow = $('.yellowSecond');
+        var elementOrange = $('.orangeSecond');
+        var elementGreen = $('.greenSecond');
+        setTimeout(function(){elementGrey.addClass('scaleFull');}, 0000);
+        setTimeout(function(){elementYellow.addClass('scaleFull');}, 1000);
+        setTimeout(function(){elementOrange.addClass('scaleFull');}, 2000);
+        setTimeout(function(){elementGreen.addClass('scaleFull');}, 3000);
+    }
+}, {offset: '50%'});
 
 $alcoholPoint.waypoint(function(direction){
     if (direction == 'down'){
@@ -64,7 +81,7 @@ $alcoholPoint.waypoint(function(direction){
         setTimeout(function(){elementOrange.addClass('scaleFull');}, 3000);
         setTimeout(function(){elementGreen.addClass('scaleFull');}, 4000);
     }
-}, {offset: 750});
+}, {offset: '85%'});
 
 $nonAlcoholPoint.waypoint(function(direction){
     if (direction == 'down'){
@@ -77,36 +94,44 @@ $nonAlcoholPoint.waypoint(function(direction){
     }
 }, {offset: 750});
 
+const $cases = $('#case');
+
+$cases.waypoint(function(direction){
+    if (direction == 'down'){
+        var caseWrapper = $('.caseWrapper');
+        caseWrapper.addClass('normalTransform');
+    }
+}, {offset:'50%'});
+
 $(document).ready(function(){
-    var element = $('.header');
-    setTimeout(function(){element.addClass('removeOpacity');}, 1000);
+    $('.smallHeading').addClass('normalTransform') && $('.pictureLayout').addClass('normalTransform');
+});
+
+
+$(document).ready(function(){
+    $('#video-background').addClass('normalTransform');
 });
 
 $(document).ready(function(){
-    var element = $('.pictureLayout');
-    setTimeout(function(){element.addClass('removeOpacity');}, 2000);
+    var element = $('.bigHeading span');
+    setTimeout(function(){element.addClass('toTopHeader');}, 1250);
 });
 
+// $(document).ready(function(){
+//     var element = $('.modalButton');
+//     setTimeout(function(){element.addClass('toTopHeader');}, 1250);
+// });
 
 $(document).ready(function(){
-    var element = $('.smallHeading');
-    setTimeout(function(){element.addClass('removeOpacity');}, 3000);
-});
-
-$(document).ready(function(){
-    var element = $('.biggestHeader');
-    setTimeout(function(){element.addClass('removeOpacity');}, 3000);
-});
-
-$(document).ready(function(){
-    var element = $('.bigHeading');
-    setTimeout(function(){element.addClass('removeOpacity');}, 4000);
+    var element = $('#intro .buttonWrapper');
+    setTimeout(function(){element.addClass('go');}, 2250);
 });
 
 $(document).ready(function(){
-    var element = $('.opacityButton');
-    setTimeout(function(){element.addClass('removeOpacity');}, 5000);
+    var element = $('#introVideo .buttonWrapper');
+    setTimeout(function(){element.addClass('goSmaller');}, 2250);
 });
+
 // $(document).ready(function(){
 //     //var element = $('.bigHeading');
 //     setTimeout(function(){element.addClass('removeOpacity');}, 4000);
@@ -148,7 +173,7 @@ $box1.waypoint(function(direction){
 
 $box2.waypoint(function(direction){
     if (direction == 'down'){
-        setTimeout(function(){$box2.addClass('removeOpacity');}, 3000);
+        setTimeout(function(){$box2.addClass('removeOpacity');}, 2000);
     }
 }, {offset: '600px'});
 
@@ -165,4 +190,18 @@ $(function() {
             $("#projects").fadeTo(750, 1);
         }, 1000);
     });
+});
+
+$(function () {
+    $(".showMoreProduct").slice(0, 6).show();
+    $(".showMoreProductButton").on('click', function (e) {
+        e.preventDefault();
+        $(".showMoreProduct:hidden").slice(0, 6).slideDown();
+        if ($(".showMoreProduct:hidden").length == 0) {
+            $(".showMoreProductButton").hide();
+        }
+    });
+    if ($(".showMoreProduct:hidden").length == 0) {
+        $(".showMoreProductButton").hide();
+    }
 });

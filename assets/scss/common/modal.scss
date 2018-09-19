@@ -39,5 +39,17 @@
         .hidden{
             display: none;
         }
+        .wpcf7-response-output{
+            margin-bottom: 0;
+        }
+        
+        form{
+            .form-group{
+                margin-bottom: 0;
+            }
+        }
+        .ajax-loader{
+            position: absolute;
+        }
     }
 }

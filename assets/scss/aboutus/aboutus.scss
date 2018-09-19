@@ -1,15 +1,18 @@
 #aboutUsIntro{
-    background : {
-        size: cover;
-        repeat: no-repeat;
-        position: center center; 
-        image: url('../images/aboutus/backgroundAboutUs.jpg');
-    }
+    // background : {
+    //     size: cover;
+    //     repeat: no-repeat;
+    //     position: center center; 
+    //     image: url('../images/aboutus/backgroundAboutUs.jpg');
+    // }
 }
 
 #aboutUsDescription{
     margin-bottom: 100px;
-    h1{
+    @include respond-up-to(md){
+        margin-bottom: 70px;
+    }
+    h2{
         color: $black;
     }
     p{
@@ -20,16 +23,33 @@
         &:last-child{
             margin-bottom: 0;
         }
+        @include respond-up-to(md){
+            margin-bottom: 30px;
+        }
     }
 }
 
 #aboutUsStats{
     margin-bottom: 95px;
+    @include respond-up-to(sm){
+        margin-bottom: 50px;
+    }
+    @include respond-exact(md){
+        margin-bottom: 40px;
+    }
     h2{
         font-size: 40px;
         text-transform: uppercase;
         margin-bottom: 70px;
         color: $black;
+        @include respond-up-to(sm){
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+        @include respond-exact(md){
+            font-size: 26px;
+            margin-bottom: 40px;
+        }
     }
     .numberDataWrapper{
         .number{
@@ -41,6 +61,16 @@
             width: -webkit-max-content; /* Chrome */
             position: relative;
             opacity: 0.75;
+            @include respond-up-to(sm){
+                font-size: 64px;
+                display: inline-block;
+            }
+            @include respond-exact(md){
+                font-size: 82px;
+            }
+            @include respond-exact(lg){
+                font-size: 95px;
+            }
         }
         .numberData{
             position: absolute;
@@ -48,13 +78,44 @@
             right: 25%;
             font-size: 21px;
             font-weight: 600;
+            br{
+                @include respond-up-to(sm){
+                    display: none;
+                }
+            }
+            @include respond-up-to(sm){
+                font-size: 14px;
+                display: inline-block;
+                position: relative;
+                top: auto;
+                right: auto;
+            }
+            @include respond-exact(md){
+                right: 7%;
+                font-size: 16px;
+            }
+            @include respond-exact(lg){
+                font-size: 18px;
+            }
         }
     }
 }
 
 #aboutUsGallery{
     margin-bottom: 90px;
+    @include respond-up-to(md){
+        margin-bottom: 75px;
+    }
     .owl-prev, .owl-next{
+        .control{
+            width: 60px !important;
+            height: 60px !important;
+            @include respond-up-to(sm){
+                width: 50px !important;
+                height: 50px !important;
+                background-size: 25%;
+            }
+        }
         &:focus{
             outline: none;
         }
@@ -73,6 +134,15 @@
             width: 405px;
             height: 1px;
             background: $product-background-grey;
+            @include respond-up-to(sm){
+                width: 75px;
+            }
+            @include respond-exact(md){
+                width: 230px;
+            }
+            @include respond-exact(lg){
+                width: 345px;
+            }
         }
         &:before{
             left: 0;
@@ -109,28 +179,58 @@
 
 #aboutUsOffers{
     margin-bottom: 85px;
+    @include respond-exact(md){
+        margin-bottom: 70px;
+    }
     h2{
         font-size: 40px;
         text-transform: uppercase;
         margin-bottom: 70px;
         color: $black;
         margin-bottom: 45px;
+        @include respond-up-to(sm){
+            font-size: 21px;
+        }
+        @include respond-exact(md){
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
     }
     .subText{
-        font-size: 21px;
+        //font-size: 21px;
         color: $black;
         margin-bottom: 50px;
+        @include respond-up-to(sm){
+            margin-bottom: 15px;
+            font-size: 14px; 
+        }
+        @include respond-exact(md){
+            margin-bottom: 30px; 
+        }
     }
     .aboutUsOffersWrapper{
         display: flex;
         flex-flow: row wrap;
+        justify-content: space-between;
         .aboutUsOfferSingle{
             width: 350px;
             height: 220px;
-            margin-right: 30px;
             margin-bottom: 30px;
             padding: 25px 30px;
             text-align: center;
+            @include respond-up-to(sm){
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            @include respond-exact(md){
+                width: 335px;
+                margin-bottom: 20px;
+            }
+            @include respond-exact(lg){
+                width: 297px;
+                margin-bottom: 20px;
+                padding: 25px;
+            }
             &:first-child{
                 background-color: $product-background-green;
                 .icon{
@@ -145,7 +245,7 @@
                 
             }
             &:nth-child(3){
-                background-color: $product-background-yellow;
+                background-color: $brand-dark-blue;
                 margin-right: 0;
                 .icon{
                     background-position: 0 -170px;
@@ -165,7 +265,7 @@
                 }
             }
             &:last-child{
-                background-color: $product-background-grey;
+                background-color: $product-background-green;
                 margin-right: 0;
                 .icon{
                     background-position: -0px -85px;
@@ -203,6 +303,14 @@
         text-transform: uppercase;
         margin-bottom: 70px;
         color: $black;
+        @include respond-up-to(sm){
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+        @include respond-exact(md){
+            font-size: 26px;
+            margin-bottom: 40px;
+        }    
     }
     .owl-prev, .owl-next{
         &:focus{
@@ -223,6 +331,16 @@
             width: 405px;
             height: 1px;
             background: $product-background-grey;
+
+            @include respond-up-to(sm){
+                width: 75px;
+            }
+            @include respond-exact(md){
+                width: 230px;
+            }
+            @include respond-exact(lg){
+                width: 345px;
+            }
         }
         &:before{
             left: 0;
@@ -233,14 +351,19 @@
         .control{
             border-radius: 50%;
             border: 1px solid $brand-green;
-            width: 70px;
-            height: 70px;
+            width: 60px;
+            height: 60px;
             margin: 0 20px;
             background : {
                 repeat: no-repeat;
                 position: center center;
             }
             cursor: pointer;
+            @include respond-up-to(sm){
+                width: 50px;
+                height: 50px;
+                background-size: 25%;
+            }
         }
         .controlLeft{
             background-image: url('../images/common/arrowLeft.png');
@@ -255,9 +378,36 @@
             flex-flow: row wrap;
             .videoBlock{
                 width: 50%;
+                @include respond-up-to(sm){
+                    margin-bottom: 25px;
+                }
+                @include respond-up-to(md){
+                    width: 100%;
+                    text-align: center;
+                }
+                @include respond-exact(md){
+                    margin-bottom: 35px;
+                }
+
+                iframe{
+                    max-width: 100%;
+                    @include respond-up-to(sm){
+                        max-width: 100%;
+                        height: auto;
+                    }
+                }
             }
             .textBlock{
                 width: 50%;
+                @include respond-up-to(sm){
+                    padding: 60px 0 0 0;
+                }
+                @include respond-exact(md){
+                    padding: 80px 0 0 0;
+                }
+                @include respond-up-to(md){
+                    width: 100%;
+                }
                 padding: 80px 0 0 95px;
                 position: relative;
                 &:before{
@@ -273,6 +423,9 @@
                         repeat: no-repeat;
                         image: url('../images/common/citate.png');
                     }
+                    @include respond-up-to(md){
+                        left: 0;
+                    }
                 }
                 &:after{
                     content: '';
@@ -283,6 +436,9 @@
                     width: calc(100% - 193px);
                     height: 2px;
                     background-color: $product-background-grey;
+                    @include respond-up-to(md){
+                        width: calc(100% - 69px);
+                    }
                 }
                 .name{
                     font-size: 18px;
@@ -290,6 +446,11 @@
                     font-weight: 700;
                     margin-bottom: 11px;
                     font-style: normal;
+                    line-height: 1.2em;
+                    @include respond-up-to(md){
+                        font-size: 16px;
+                        margin-bottom: 5px;
+                    }
                 }
                 .position{
                     font-size: 18px;
@@ -297,17 +458,17 @@
                     font-weight: 500;
                     margin-bottom: 30px;
                     font-style: normal;
+                    line-height: 1.2em;
+                    @include respond-up-to(md){
+                        font-size: 16px;
+                    }
                 }
                 p{
                     font-size: 16px;
                     font-style: italic;
                     color: $black;
-                }
-                // .review{
-                //     font-size: 16px;
-                //     font-style: italic;
-                //     color: $black;
-                // }                
+                    line-height: 1.5em;
+                }            
             }
         }
     }
