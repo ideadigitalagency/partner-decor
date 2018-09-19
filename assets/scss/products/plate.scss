@@ -1,29 +1,50 @@
 .plateIntroVideo{
-    background-image: url('../images/product/backgroundPlate.jpg') !important;
+    //background-image: url('../images/product/backgroundPlate.jpg') !important;
 }
 
 .plateProduct{
     margin-bottom: 70px;
-    .nav-tabs{
-        justify-content: center;
-        margin-bottom: 50px;
-        li{
-            padding: 0 55px;
-            height: auto;
-            padding-bottom: 20px;        
-            a{
-                text-transform: uppercase;
-                font-size: 14px;
-                font-weight: 700;
-                padding-bottom: 20px;
-                border-bottom: 2px solid $brand-black;
-            }
-            .active{
-                color: $brand-green;
-                border-bottom: 2px solid $brand-green;
-            }
-        }
-    }
+    // .linkLine{
+    //     // justify-content: center;
+    //     // margin-bottom: 50px;
+    //     justify-content: center;
+    //     display: flex;
+    //     margin-bottom: 50px;
+    //     list-style: none;
+    //     border-bottom: 1px solid $product-background-grey;
+    //     li{
+    //         padding: 0 55px;
+    //         height: auto;
+    //         padding-bottom: 20px;
+    //         &:before{
+    //             content: '';
+    //             display: block;
+    //             position: absolute;
+    //             right: 0;
+    //             left: 0;
+    //             background-position: center top;
+    //         }        
+    //         a{
+    //             text-transform: uppercase;
+    //             font-size: 14px;
+    //             font-weight: 700;
+    //             padding-bottom: 20px;
+    //             border-bottom: 2px solid $brand-black;
+    //         }
+    //         .active{
+    //             color: $brand-green;
+    //             border-bottom: 2px solid $brand-green;
+    //         }
+    //     }
+    //     .plates{
+    //         position: relative;
+    //         &:before{               
+    //             width: 49px;
+    //             height: 12px;
+    //             background-image: url('../images/product/platesSprite.png');
+    //         }
+    //     }
+    // }
     .tab-content{
         width: 100%;
         padding: 0 15px;
@@ -54,12 +75,5 @@
         .productCardPreview{
             margin-bottom: 50px;
         }
-    }
-    .jscroll-inner{
-        width: 100%;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     }
 }

@@ -1,5 +1,8 @@
 footer{
     margin-bottom: 55px;
+    @include respond-up-to(md){
+        margin-bottom: 30px;
+    }
     .navigationMenuBottom{
         list-style: none;
         margin-bottom: 50px;
@@ -23,6 +26,12 @@ footer{
             font-size: 14px;
             margin-bottom: 15px;
         }
+        @include respond-up-to(md){
+            margin-bottom: 0;
+            &:hover{
+                margin-bottom: 0;
+            }
+        }
     }
     .pageLink{
         display: block;
@@ -44,6 +53,9 @@ footer{
         font-size: 14px;
         margin-bottom: 15px;
         color: rgba(0,0,0,0.6);
+        @include respond-up-to(sm){
+            font-size: 12px;
+        }
     }
     .separator{
         height: 1px;
@@ -61,17 +73,26 @@ footer{
         color: $black;
         margin-bottom: 0;
         text-align: right;
+        @include respond-up-to(sm){
+            text-align: left;
+        }
         a{
             font-size: 12px;
             color: $black;
-            border-bottom: 2px solid $brand-grey;
+            border-bottom: 1px solid $brand-grey;
             margin-bottom: 0; 
         }
     }
     .footerLogo{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-end;
+        @include respond-up-to(sm){
+            justify-content: flex-start;
+        }
+        @include respond-up-to(md){
+            margin-bottom: 25px;
+        }
         .logo{
             display: block;
             position: relative;
@@ -82,11 +103,19 @@ footer{
             margin-bottom: 0;
             transition: all .5s ease-out;
             -webkit-transition: all .5s ease-out;
+            &:last-of-type{
+                margin-left: 10px;
+            }
             &:hover{
                 border-color: $brand-green;
                 g{
                     fill: $brand-green;
                 }
+            }
+            @include respond-up-to(sm){
+                width: 50px;
+                height: 50px;
+               
             }
             svg{
                 //display: block;

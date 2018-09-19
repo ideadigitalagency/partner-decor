@@ -26,7 +26,7 @@
 <header class="header">
 	<div class="container">
 		<div class="row" style="position: relative;">
-			<div class="col-3">
+			<div class="col-md-2 col-lg-3">
 				<div class="flexWrapper flexWrapperLeft">
 					<div id="nav-icon3">
 						<span></span>
@@ -40,15 +40,19 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="offset-md-2 col-md-3 offset-lg-0 col-lg-6">
 				<div class="flexWrapper flexWrapperCenter">
 					<img src="build/images/index/logo.png" alt="logo" class="logo">
 				</div>
 			</div>
-			<div class="col-3">
+			<div class="col-md-4 col-lg-3">
 				<div class="flexWrapper flexWrapperRight">
 					<a class="phone" href="tel:+380969277522">+380969277522</a>
-					<div class="favoriteIcon"></div>
+					<div class="favoriteIcon">
+						<div class="number">
+							<p>10</p>
+						</div>
+					</div>
 					<div class="searchIcon"></div>
 				</div>
 			</div>
@@ -261,16 +265,21 @@
 		<div class="row">
 			<div class="col-12">
 				<p class="smallHeading text-center">
-					Дифференцируем бренд, разрабатывая эксклюзивные формы стекла.<br>Воплощаем идеи продвижения бренда в органичном декоре. 
+					Партнер Декор предлагает Вам реализацию проектов "под ключ". Наша компания нанесет логотипы вашей фирмы, любые изображения и символику на посуду, которую выберите вы. Штат креативных дизайнеров разработает индивидуальный макет логотипа
 				</p>
-				<h1 class="bigHeading text-center">Декорирование посуды</h1>
-				<button class="opacityButton" data-target="#modalForm" data-toggle="modal">Оставить заявку</button>
-				<a class="arrowBottom" href="#">
-					<img src="build/images/index/arrowDown.png" alt="scrollDown">
-				</a>
 			</div>
 		</div>
 	</div>
+	<h1 class="bigHeading text-center"><span>Декорирование посуды</span></h1>
+	<div class="buttonWrapper">
+		<!-- <button class="classicButton modalButton" data-target="#modalForm" data-toggle="modal">
+			Оставить заявку
+		</button> -->
+		<button class="changingButton mainButton" data-hover="Оставить заявку" data-target="#modalForm" data-toggle="modal"><div>Оставить заявку</div></button>
+	</div>
+	<a class="arrowBottom" href="#product">
+		<img src="build/images/index/arrowDown.png" alt="scrollDown">
+	</a>
 </section>
 <section id="product" class="mainpageProduct">
 	<div class="container">	
@@ -464,8 +473,8 @@
 		<h2 class="sectionHeading">Кейсы</h2>
 		<div class="row">
 			<div class="caseWrapper">
-				<a href="#" class="caseImageLink bounceInLeft animatable"></a>
-				<div class="caseDescription text-center bounceInRight animatable">
+				<a href="#" class="caseImageLink"></a>
+				<div class="caseDescription text-center">
 					<p class="caseHeading">Водка "Петриковская"</p>
 					<p class="caseTechnology">Технология</p>
 					<p class="caseTechnologyContent">химическое матирование с эффектом "окна", шелкотрафаретная печать керамическими красками</p>
@@ -473,9 +482,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="caseShowMoreLinkWrapper">
+		<button class="changingButton mainButton" data-hover="Смотреть все кейсы" data-target="#modalForm" data-toggle="modal"><div>Смотреть все кейсы</div></button>
+		<!-- <div class="caseShowMoreLinkWrapper">
 			<a href="#" class="caseShowMoreLink">Смотреть все кейсы</a>
-		</div>
+		</div> -->
 	</div>
 </section>
 <section id="popularItems">
@@ -566,6 +576,7 @@
 				<a class="phone" href="tel:+380969277522">+380969277522</a>
 				<p class="email">info@partner-a.com.ua</p>
 				<p class="address">Днепр,<br>ул. Маршала Малиновского, 114</p>
+				<p class="address">Днепр,<br>ул. Якова Самарского, 7</p>
 			</div>
 			<div class="col-2">
 				<div class="footerLogo">
@@ -698,5 +709,8 @@
 <script src="build/js/swiperSlider.min.js?v=0.001"></script>
 <script src="build/js/owlSlider.min.js?v=0.001"></script>
 <script src="build/js/animations.min.js?v=0.001"></script>
+
+<script src="build/js/scrollToElement.min.js?v=0.001"></script>
+
 </body>
 </html>

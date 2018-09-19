@@ -1,7 +1,9 @@
 #intro{
-    padding-top: 50px;
-    min-height: 100vh;
+    min-height: calc(100vh - 82px);
     position: relative;
+    @include respond-exact(md){
+        min-height: calc(100vh - 67px);
+    }
     .pictureLayout{
         position: absolute;
         height: 100%;
@@ -9,104 +11,123 @@
         left: 0;
         right: 0;
         z-index: -1;
+        transform: scale(1.2);
         background : {
-            position: center center;
+            position: center bottom;
             repeat: no-repeat;
             image: url('../images/index/indexBackgroundBig.jpg');
         }
-        opacity: 0;
-        transition: opacity 1s;
-        -webkit-transition: opacity 1s;
+        @include respond-exact(md){
+            background-size: contain;
+            background-position: center 40%;
+        }
+        @include respond-to(md){
+            background-size: 100%;
+        }
+        @media screen and (min-width: 1140px){
+            background-size: 65%
+        }
+        @media screen and (min-width: 1280px){
+            background-size: 80%;
+            background-position: center 80%;
+        }
+        @media screen and (min-width: 1366px){
+            background-size: 70%;
+            background-position: center 80%;
+        }
+       
+        @media screen and (min-width: 1440px){
+            background-position: center 84%;
+            background-size: 73%;
+        }
+        @media screen and (min-width: 1500px){
+            background-position: center 105%;
+            background-size: 67%;
+        }
+        
+        @media screen and (min-width: 1920px){
+            background-position: center 60%;
+            background-size: auto;
+        }
     }
+
     .smallHeading{
         font-size: 14px;
         color: $brand-light-grey;
-        margin-bottom: 225px;
+        margin-top: 50px;
+        transform: scale(1.2);
         @media screen and (max-width: 1439px){
-            margin-bottom: 155px;
+            //margin-bottom: 155px;
         }
-        opacity: 0;
-        -webkit-transition: opacity 1s;
-        transition: opacity 1s;
-    }  
-    .bigHeading{
-        font-size: 62px;
-        // color: transparent;
-        //background: transparent;
-        //height: 93px;
-        //width: 100%;
-        position: relative;
-        display: block;
-        opacity: 0;
-        -webkit-transition: opacity 1s;
-        transition: opacity 1s;
-    }   
+    }
+
     h1{
         font-size: 62px;
         font-weight: 800;
         text-transform: uppercase;
-        margin-bottom: 170px;
+
         letter-spacing: 0.025em;
         color: $brand-black;
-    }
-    button{
-        @extend .buttonStyles;
-        display: block;
-        border: 1px solid $brand-green;
-        color: $white;
-        background-color: $brand-green;
-        margin-bottom: 35px;
-        // transition: background-color .5s ease-out;
-        // -webkit-transition: background-color .5s ease-out;
-        transition: color .5s ease-out, background-color .5s ease-out, opacity 1s;
-        -webkit-transition: color .5s ease-out, background-color .5s ease-out, opacity 1s;
-        &:hover{
-            background-color: transparent;
-            color: $white;
+        @include respond-up-to(sm){
+            font-size: 30px;
         }
-    }
-    .opacityButton{
-        opacity: 0;
-        // transition: opacity 1s;
-        // -webkit-transition: opacity 1s;
-    }
-    .arrowBottom{
-        display: block;
-        width: intrinsic;
-        width: -moz-max-content;
-        width: -webkit-max-content;
-
-        margin: 0 auto;
-
+        @include respond-exact(md){
+            font-size: 40px;
+        }
     }
 }
 
 .mainpageProduct{
+    padding-top: 20px;
     .productLinkWrapper{
         .grey{
             width: 100%;
             height: 560px;
             background-color: $product-background-grey;
+            @include respond-up-to(sm){
+                height: 295px;
+                margin-bottom: 20px;
+            }
+            @include respond-exact(md){
+                height: 335px;
+            }
         }
 
         .yellow{
             background-color: $product-background-yellow;
-            width: 301.5px;
+           // width: 301.5px;
+            width: 48%;
             height: 294px;
             margin-bottom: 30px;
+            @include respond-up-to(md){
+                height: 175px;
+                margin-bottom: 20px;
+            }
         }
 
         .orange{
             background-color: $product-background-orange;
-            width: 301.5px;
+           // width: 301.5px;
+            width: 48%;
             height: 294px;
             margin-bottom: 30px;
+            @include respond-up-to(md){
+                height: 175px;
+                margin-bottom: 20px;
+            }
         }
 
         .orangeSecond{
             width: 100%;
             height: 235.5px;
             margin-bottom: 0;
+            @include respond-up-to(sm){
+                height: 175px;
+                margin-bottom: 20px;
+            }
+            @include respond-exact(md){
+                height: 140px;
+            }
         }
 
         .green{
@@ -114,17 +135,31 @@
             width: 100%;
             height: 235.5px;
             margin-bottom: 30px;
+            @include respond-up-to(sm){
+                height: 175px;
+                margin-bottom: 20px;
+            }
+            @include respond-exact(md){
+                height: 140px;
+                margin-bottom: 20px;
+            }
         }
 
         .greenSecond{
-            width: 301.5px;
+            width: 48%;
             height: 294px;
+            @include respond-up-to(md){
+                height: 175px;
+            }
         }
     }
 }
 
 #clients{
     margin-bottom: 125px;
+    @include respond-up-to(md){
+        margin-bottom: 60px;
+    }
     .swiper-container {
         width: 100%;
         height: auto;
@@ -148,6 +183,9 @@
 			-ms-flex-align: center;
 			-webkit-align-items: center;
             align-items: center;
+            @include respond-up-to(sm){
+                height: auto;
+            }
             img{
                 -webkit-transition: .5s ease-in-out;
                 -moz-transition: .5s ease-in-out;
@@ -172,7 +210,14 @@
             position: relative;
             bottom: auto;
             left: auto;
-            margin-top: 90px;
+            padding-top: 60px;
+            border-top: 1px solid $product-background-grey;
+            @include respond-up-to(sm){
+                margin-top: 20px;
+            }
+            @include respond-up-to(md){
+                padding-top: 20px;
+            }
             .swiper-pagination-bullet-active{
                 background: $brand-green;
                 width: 10px;
@@ -187,8 +232,29 @@
     .caseImageLink{
         order: 1 !important;
     }
+    .caseWrapper{
+        transform: scale(1.2);
+        @include respond-up-to(sm){
+            transform: scale(1) !important;
+        }
+    }
 }
 
 #popularItems{
-    margin-bottom: 125px;
+    margin-bottom: 75px;
+    @include respond-up-to(sm){
+        margin-bottom: 20px;
+    }
+    @include respond-exact(md){
+        margin-bottom: 32px;
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.normalTransform{
+    transform: scale(1) !important;
+    transition: transform 1.25s;
 }

@@ -5,11 +5,10 @@ header{
     width: 100%;
     padding: 20px 0;
     z-index: 4;
-    opacity: 0;
-    transition: opacity 1s;
-    -webkit-transition: opacity 1s;
     border-bottom: 1px solid $product-background-grey;
-    //max-height: 95px;
+    @include respond-up-to(md){
+        padding: 15px 0;
+    }
     .flexWrapperLeft{
         flex-direction: row;
         justify-content: flex-start;
@@ -21,6 +20,9 @@ header{
             padding: 10px 30px 10px;
             border-radius: 30px;
             margin-left: 40px;
+            @include respond-up-to(md){
+                display: none;
+            }
             cursor: pointer;
             p{
                 font-weight: 600;
@@ -45,8 +47,14 @@ header{
             }
         }
     }
+    .flexWrapperCenter{
+        a{
+            margin: auto
+        }
+    }
     .flexWrapper{
         display: flex;
+        height: 100%;
         .logo{
             margin: auto;
         }
@@ -56,22 +64,68 @@ header{
         justify-content: space-between;
         align-items: center;
         height: 100%;
+        @include respond-up-to(sm){
+            justify-content: flex-end;
+        }
+        @include respond-exact(md){
+            justify-content: center;
+        }
         .phone{
             font-size: 14px;
             font-weight: 600;
             color: $brand-green;
+            @include respond-up-to(lg){
+                font-size: 12px;
+            }
+        }
+        .phoneMobile{
+            width: 25px;
+            height: 25px;
+            display: flex;
+            border-radius: 50%;
+            border: 1px solid $brand-green;
+            svg{
+                width: 15px;
+                height: 15px;
+                margin: auto;
+            }
+
         }
         .favoriteIcon{
             width: 22px;
             height: 17px;
             cursor: pointer;
+            position: relative;
             background : {
                 image: url('../images/casesDemo/productMoreSprite.png'); 
                 repeat: no-repeat;
                 position: center top;
             }
+            @include respond-up-to(sm){
+                display: none;
+            }
+            @include respond-exact(md){
+               margin-left: 25px;
+            }
             &:hover{
                 background-position: center bottom;
+            }
+            .number{
+                background-color: $brand-green;
+                position: absolute;
+                top: -1px;
+                right: -28px;
+                border-radius: 50%;
+                display: flex;
+                width: 20px;
+                height: 20px;
+                p{
+                    font-size: 11px;
+                    font-weight: 600;
+                    color: $white;
+                    margin: auto;
+                }
+                
             }
         }
         .searchIcon{
@@ -82,6 +136,9 @@ header{
                 image: url('../images/casesDemo/productBioSprite.png');
                 repeat: no-repeat;
                 position: -5px -5px;
+            }
+            @include respond-up-to(md){
+                display: none;
             }
             &:hover{
                 background-position: -5px -34px;
@@ -115,6 +172,11 @@ header{
             border: 1px solid $product-background-grey;
             padding: 15px 15px 15px 50px;
             font-size: 13px;
+            transition: all 1s ease-out;
+            &:active, &:focus{
+                border: 1px solid $brand-green;
+                transition: all 1s ease-out;
+            }
         }
         .search-submit, .screen-reader-text{
             display: none;
@@ -177,6 +239,12 @@ header{
     background: $white;
     padding: 200px 0 40px; 
     transition: visibility 1.5s, opacity 1.5s;
+    @include respond-up-to(sm){
+        overflow: scroll;
+    }
+    @include respond-up-to(md){
+        padding: 150px 0 40px;
+    }
     .yellowLayout{
         position: absolute;
         top: 0;
@@ -185,12 +253,23 @@ header{
         width: 22.1%;
         background: $product-background-yellow;
         z-index: -1;
+        @include respond-up-to(sm){
+            width: 45.6%;
+            max-width: 170px;
+            position: fixed;
+        }
+        @include respond-exact(md){
+            width: 32.4%;
+        }
         @media screen and (min-width: 1920px){
             width: 32.5%;
         }
     }
     .navigationMenuMain{
         list-style: none;
+        @include respond-up-to(sm){
+            position: fixed;
+        }
         li{
             padding-bottom: 5px;
             border-bottom: 2px solid transparent;
@@ -217,14 +296,26 @@ header{
         flex-flow: row wrap;
         li{
             margin-bottom: 75px;
+            @include respond-up-to(sm){
+                margin-bottom: 60px;
+            }
             position: relative;
             transition: all 0.5s;
 
             &:nth-child(odd){
                 width: 62%;
                 padding-left: 150px;
+                @include respond-up-to(sm){
+                    padding-left: 53px;
+                }
+                @include respond-up-to(md){
+                    width: 100%;
+                }
                 &:before{
                     left: 13%;
+                    @include respond-up-to(sm){
+                        left: 0%;
+                    }
                 }
             }
             &:nth-child(even){
@@ -232,6 +323,21 @@ header{
                 padding-left: 95px;
                 &:before{
                     left: 6%;
+                    @include respond-up-to(sm){
+                        left: 0%;
+                    }
+                }
+                @include respond-up-to(sm){
+                    padding-left: 53px;
+                }
+                @include respond-exact(md){
+                    padding-left: 150px;
+                    &:before{
+                        left: 13%;
+                    }
+                }
+                @include respond-up-to(md){
+                    width: 100%;
                 }
             }
 
@@ -258,6 +364,9 @@ header{
             &:first-child{
                 &:before{
                     background-image: url('../images/menu/nonAlcohol.png');
+                    @include respond-up-to(sm){
+                        top: 4px;
+                    }
                 }
             }
             &:nth-child(2){
@@ -268,6 +377,9 @@ header{
             &:nth-child(3){
                 &:before{
                     background-image: url('../images/menu/alcohol.png');
+                    @include respond-up-to(sm){
+                        top: 4px;
+                    }
                 }
             }
             &:nth-child(4){
@@ -295,6 +407,9 @@ header{
                     background-image: url('../images/menu/present.png');
                 }
             }
+            &:last-child{
+                margin-bottom: 0;
+            }
             a{
                 font-size: 14px;
                 font-weight: 500;
@@ -303,6 +418,9 @@ header{
                 transition: all 0.5s;
                 &:hover{
                     color: $brand-black;
+                }
+                @include respond-up-to(md){
+                    font-size: 12px;
                 }
             }
         }
@@ -316,6 +434,10 @@ header{
         bottom: 10.7%;
         display: flex;
         flex-direction: row;
+        @include respond-up-to(sm){
+            position: fixed;
+            bottom: 5.7%;
+        }
         .logo{
             display: block;
             position: relative;
@@ -385,12 +507,19 @@ header{
     visibility: visible !important;
     transition: opacity 1.5s, visibility 1.5s;
     width: calc(100% - 17px) !important;
+    @include respond-up-to(md){
+        width: 100% !important;
+    }
 }
 
 .disableBodyScroll{
     height: 100%;
     overflow: hidden;
-    padding-right: 17px;
+    @include respond-to(lg){
+        padding-right: 17px;
+    }
+    
+
 }
 
 #productMenu{
@@ -405,6 +534,9 @@ header{
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s, visibility 1s;
+    @include respond-up-to(md){
+        display: none;
+    }
     &:before{
         display: block;
         content: '';
@@ -419,6 +551,18 @@ header{
             image: url('../images/menu/productMenu.png');
         }
     }
+    .close-button-menu{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 14px;
+        height: 14px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-image: url('../images/common/closePopup.png');
+        background-color: transparent;
+    }
+    
     a{
         margin-bottom: 15px;
         &:hover{
@@ -480,6 +624,13 @@ header{
                     }
                 }
             }
+            #menu-prochie-tovary{
+                li{
+                    &:before{
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
@@ -489,3 +640,44 @@ header{
     visibility: visible !important;
     transition: opacity 1s, visibility 1s;
 }
+
+a.simplefavorite-button{
+    margin: 10px 0 0;
+    height: fit-content;;
+    display: block;
+    cursor: pointer;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    height: fit-content;
+    height: -moz-max-content;
+    height: -webkit-max-content;
+    font-size: 14px;
+    font-style: italic;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease-out;
+    &:hover{
+        color: $brand-green !important;
+        transition: all 0.5s ease-out;
+        &:before{
+            transition: all 0.5s ease-out;
+            background-position: bottom center !important;
+        }
+    }
+    &:before{
+        position: absolute;
+        display: block;
+        content: '';
+        width: 22px;
+        height: 17px;
+        right: -33px;
+        transition: all 0.5s ease-out;
+        background : {
+            repeat: no-repeat;
+            image: url('../images/casesDemo/productMoreSprite.png');
+            repeat: no-repeat;
+            position: top center;
+        }
+    }
+}    

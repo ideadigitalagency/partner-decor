@@ -1,9 +1,45 @@
 #introVideo{
-    background : {
-        position: center center;
-        size: cover;
-        repeat: no-repeat;
-        image: url('../images/product/background.jpg');
+    position: relative;
+    overflow: hidden;
+    #video-background {
+        transform: scale(1.2);
+
+        position: absolute;
+        right: 0; 
+        bottom: 0;
+        min-width: 100%; 
+        min-height: 100%;
+        width: auto; 
+        height: auto;
+        z-index: -100;
+        
+        @media (min-width: 1440px){
+            right: 0; 
+            bottom: 0;
+            left: auto;
+            top: 0;
+        }
+    }
+    h1{
+        font-weight: 300;
+        font-size: 55px;
+        text-transform: uppercase;
+        color: $white;
+        span{
+            font-size: inherit;
+            font-weight: inherit;
+            color: $white;
+            text-shadow: 0 4px 8px rgba(0,0,0,.5);
+        }
+        @include respond-up-to(sm){
+            font-size: 26px;
+        }
+        @include respond-exact(md){
+            font-size: 32px;
+        }
+    }
+    .arrowBottom{
+        bottom: 12%;
     }
 }
 
@@ -14,17 +50,38 @@
             height: 660px;
             width: 100%;
             background-color: $brand-blue;
+            @include respond-up-to(sm){
+                height: 295px;
+                margin-bottom: 20px;
+            }
+            @include respond-exact(lg){
+                height: 335px;
+                margin-bottom: 20px;
+            }
         }
         .grey{
             height: 380px;
             width: 100%;
             margin-bottom: 30px;
             background-color: $product-background-grey;
+            @include respond-up-to(md){
+                margin-bottom: 20px;
+                height: 175px;
+            }
+            
         }
         .blueDarken{
             width: 100%;
             height: 250px;
             background-color: $brand-dark-blue;
+            @include respond-up-to(sm){
+                margin-bottom: 20px;
+                height: 175px;
+            }
+            @include respond-exact(md){
+                height: 140px;
+                margin-bottom: 20px;
+            }
         }
     }
 }
